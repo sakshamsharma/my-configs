@@ -26,7 +26,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'edkolev/tmuxline.vim'
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+
+" AutoComplPop
+Plugin 'vim-scripts/AutoComplPop'
 
 " Now turning filetype back on
 filetype plugin indent on
