@@ -34,6 +34,7 @@ Plugin 'vim-scripts/AutoComplPop'
 " Now turning filetype back on
 filetype plugin indent on
 
+au BufRead,BufNewFile *.ino,*.pde set filetype=c++
 
 set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
@@ -44,6 +45,8 @@ let g:airline_powerline_fonts = 1
 
 " NERDcommenter mapping
 nmap // <leader>ci
+nmap .. <leader><leader>w
+nmap ,, <leader><leader>b
 
 syntax on
 syntax enable

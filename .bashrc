@@ -118,5 +118,9 @@ fi
 alias gv='gvim'
 
 # Modifying the display line in terminal
-#export PS1="\e[1;34m\u@\h \W> \e[m"
 export PS1='\[\e[1;32m\]\W > \[\e[m\]'
+
+# GOPATH
+GOPATH=/home/saksham/.go
+export GOPATH
+PATH=$PATH:$GOPATH/bin # Add GOPATH/bin to PATH for scripting
