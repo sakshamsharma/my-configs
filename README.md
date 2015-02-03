@@ -5,6 +5,7 @@ Use
 to stage changes.
 
 Basic requirements (assuming standard installations already present):
+
 1. Curl for Vundle.
 2. Vundle (use git clone).
 3. Powerline fonts (for Linux/Unix based systems for airline).
