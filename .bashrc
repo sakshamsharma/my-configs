@@ -116,6 +116,9 @@ fi
 # CUSTOM COMMANDS
 # GVim Alias
 alias gv='gvim'
+alias upd='sudo apt-get update'
+alias inst='sudo apt-get install'
+alias repo='sudo add-apt-repository'
 
 # Modifying the display line in terminal
 export PS1='\[\e[1;32m\]\W > \[\e[m\]'
