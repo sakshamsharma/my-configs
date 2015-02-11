@@ -119,11 +119,11 @@ alias gv='gvim'
 alias upd='sudo apt-get update'
 alias inst='sudo apt-get install'
 alias repo='sudo add-apt-repository'
+alias pac='sudo pacman -S'
 
 # Modifying the display line in terminal
 export PS1='\[\e[1;32m\]\W > \[\e[m\]'
 
-# GOPATH
-GOPATH=/home/saksham/.go
-export GOPATH
-PATH=$PATH:$GOPATH/bin # Add GOPATH/bin to PATH for scripting
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+shopt -s autocd

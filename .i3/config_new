@@ -52,57 +52,43 @@ exec --no-startup-id feh --bg-fill ~/TSWall/1.jpg
 exec synclient HorizEdgeScroll=1
 exec synclient HorizTwoFingerScroll=1
 
-# Synapse
-exec --no-startup-id synapse
+# Gnome-DO
+#exec --no-startup-id gnome-do
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes
 
 # Shortcuts
 # Firefox
+#bindsym $mod+F1 exec google-chrome-chrome
 bindsym $mod+F1 exec firefox-developer
 bindsym $mod+Shift+z [class="Firefox"] focus
 
-# Terminal
-bindsym Ctrl+$oth+T exec terminator
-
 # GVim
-bindsym $mod+F2 exec vim
-
-# Nautilus
-bindsym $mod+F3 exec nautilus
+bindsym $mod+F2 exec gvim
 
 # Sublime
-bindsym $mod+F4 exec subl
+bindsym $mod+F3 exec subl
 
 # Suspend
 bindsym $mod+F12 exec sudo pm-suspend
 
+# Nemo
+bindsym $mod+F5 exec nemo
+
+# Marlin
+bindsym $mod+F4 exec marlin
+
 # Wicd-gtk
 bindsym $mod+F6 exec wicd-gtk
-
-# Changing to hjkl
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-bindsym $mod+Shift+v split h
-bindsym $mod+v split v
-
 
 # Window Marks
 bindsym $mod+Shift+m exec i3-input -F 'mark %s' -P 'Mark name: '
 bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 
 # brightness control
-bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 10
-bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 5
 
 # Nagbar
 bindsym $mod+F9 exec "i3-nagbar -t warning -m 'Edit system files' -b 'config' 'exec mousepad ~/.i3/config' -b 'i3status' 'exec mousepad ~/.i3/config'"
@@ -120,7 +106,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink --
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $oth+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -130,13 +117,13 @@ bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -144,11 +131,23 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -168,7 +167,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+Shift+a focus child
+#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -209,10 +208,10 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-		bindsym h resize shrink width 10 px or 10 ppt
-		bindsym j resize grow height 10 px or 10 ppt
-		bindsym k resize shrink height 10 px or 10 ppt
-		bindsym l resize grow width 10 px or 10 ppt
+	bindsym j resize shrink width 10 px or 10 ppt
+		bindsym k resize grow height 10 px or 10 ppt
+		bindsym l resize shrink height 10 px or 10 ppt
+		bindsym semicolon resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
 		bindsym Left resize shrink width 10 px or 10 ppt
@@ -226,27 +225,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-
-# Add a small delay to prevent suspend races
-# https://bugs.launchpad.net/ubuntu/+source/unity-2d/+bug/830348
-set $Locker i3lock && sleep 1
-
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (u) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym u exec --no-startup-id systemctl poweroff, mode "default"  
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+Pause mode "$mode_system"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
