@@ -121,6 +121,12 @@ alias inst='sudo apt-get install'
 alias repo='sudo add-apt-repository'
 alias pac='sudo pacman -S'
 
+# Mounting aliases
+alias DataDr='sudo mount /dev/sda6 /mnt'
+alias UData='sudo umount /dev/sda6'
+alias UbuDr='sudo mount /dev/sda8 /mnt'
+alias UUbuDr='sudo umount /dev/sda8'
+
 # Modifying the display line in terminal
 export PS1='\[\e[1;32m\]\W > \[\e[m\]'
 
