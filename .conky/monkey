@@ -4,28 +4,31 @@ out_to_console yes
 
 background no
 max_text_width 0
-update_interval 1.0
+update_interval 2.0
 total_run_times 0
 short_units on
 if_up_strictness address
 use_spacer yes
-override_utf8_locale no
+override_utf8_locale yes
 cpu_avg_samples 4
 
 TEXT
 [
-	{ "full_text" : " Weather: ${execi 300 /home/sakshams/.conky/weather "ASI|IN|IN033|Lucknow"}",
+	{ "full_text" : " Weather: ${execi 300 /home/sakshams/.conky/weather "ASI|IN|IN033|Lucknow" }",
 		"color" : "\#ffffff"},
-	{ "full_text" : " LAN: Down ${downspeed enp9s0} Up ${upspeed enp9s0}" , "color" : "\#66ff99"},
-	{ "full_text" : " WiFi: Down ${downspeed wlp8s0} Up ${upspeed wlp8s0}" , "color" : "\#66ff09"},
+	{ "full_text" : "${if_up enp9s0} LAN: Down ${downspeed enp9s0} Up ${upspeed enp9s0} ${endif}" , "color" : "\#66ff99"},
+	{ "full_text" : "${if_up eth0} LAN: Down ${downspeed eth0} Up ${upspeed eth0} ${endif}" , "color" : "\#66ff99"},
+	{ "full_text" : "${if_up wlp8s0} WiFi: Down ${downspeed wlp8s0} Up ${upspeed wlp8s0} ${endif}" , "color" : "\#66ff09"},
+	{ "full_text" : "${if_up wlan0} WiFi: Down ${downspeed wlan0} Up ${upspeed wlan0} ${endif}" , "color" : "\#66ff09"},
 	{ "full_text" : " Uptime $uptime_short " , "color" : "\#ffffff"  },
 	{ "full_text" : "${fs_free /home} Free in Home" , "color" : "\#00ff00"  },
 	{ "full_text" : " RAM ${mem} ${memperc}% " , "color" :
 	    ${if_match ${memperc}<90}"\#66ff99"${else}"\#ff0000"${endif} },
 	{ "full_text" : "CPU ${cpu}% ", "color" :
     	${if_match ${cpu}<90}"\#66ff99"${else}"\#ff0000"${endif} },
-	{ "full_text" : " Load ${loadavg 1} " , "color" : "\#00ff7f"  },
 	{ "full_text" : " I/O ${diskio /dev/sda} " , "color" : "\#ff9900"  },
-	{ "full_text" : " Vol: ${exec amixer get Master | grep "Front Left:" | awk '{print $5}'  } " , "color" : "\#ffffff"},
+	{ "full_text" : " Volume: ${exec amixer get Master | grep "Front Left:" | awk '{print $5}'  } " , "color" : "\#ffffff"},
+	{ "full_text" : " Battery ${battery BAT1} (${battery_time BAT1}) ", "color": "\#ffffff"},
+	{ "full_text" : " Saksham Sharma " , "color" : "\#ffffff" },
 	{ "full_text" : " $time " , "color" : "\#fff00"  }
 ],
