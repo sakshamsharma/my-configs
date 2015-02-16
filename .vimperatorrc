@@ -1,0 +1,9 @@
+"3.8.3 (created: 2014/11/09 13:19:01)
+
+source! /home/sakshams/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+nnoremap j <down>
+nnoremap k <up>
+nnoremap h <left>
+nnoremap l <right>
