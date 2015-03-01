@@ -19,6 +19,9 @@ if has('unix')
   Plugin 'bling/vim-airline'
 endif
 
+" People might kill me for this.
+Plugin 'andrep/vimacs'
+
 " Git plugin
 Plugin 'tpope/vim-fugitive'
 
@@ -70,6 +73,9 @@ Plugin 'tomasr/molokai'
 call vundle#end()
 filetype plugin indent on
 
+" For vimacs
+let g:VM_Enabled=1
+
 " For airline
 if has('unix')
   set guifont=Liberation\ Mono\ for\ Powerline\ 10
@@ -87,6 +93,18 @@ nmap ,, <leader><leader>b
 
 syntax on
 syntax enable
+set nowrap
+
+" Enable code folding with z,a
+set foldmethod=indent
+set foldlevel=99
+
+" Make new windows with <ctrl>+w + v , <ctrl>+w + s and close with <ctrl>+w+q
+" Allow movement between windows with control+movement keys
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
 
 set backspace=indent,eol,start
 set background=dark
@@ -132,6 +150,7 @@ if has("autocmd")
 endif
 
 set t_Co=256
+set gfn=monofur\ for\ Powerline\ Regular\ 13
 
 if has('unix')
 	if !exists('g:airline_symbols')
