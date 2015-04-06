@@ -122,6 +122,7 @@ set sidescroll=1
 
 set ignorecase
 set smartcase     "CSen only when capitals used.
+set incsearch	  "Starts showing results as you type
 set hlsearch
 
 set autoindent

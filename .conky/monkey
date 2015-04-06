@@ -28,7 +28,7 @@ TEXT
     	${if_match ${cpu}<90}"\#66ff99"${else}"\#ff0000"${endif} },
 	{ "full_text" : " I/O ${diskio /dev/sda} " , "color" : "\#ff9900"  },
 	{ "full_text" : " Volume: ${exec amixer get Master | grep "Front Left:" | awk '{print $5}'  } " , "color" : "\#ffffff"},
-	{ "full_text" : " Battery ${battery BAT1} ${if_match ${battery BAT1}<99}(${battery_time BAT1})${else}!${endif}", "color": "\#ffffff"},
+	{ "full_text" : " Battery ${battery BAT1} (${battery_time BAT1})", "color": "\#ffffff"},
 	{ "full_text" : " Saksham Sharma " , "color" : "\#ffffff" },
 	{ "full_text" : " $time " , "color" : "\#fff00"  }
 ],

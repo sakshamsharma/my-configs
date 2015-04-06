@@ -90,6 +90,10 @@ alias repo='sudo add-apt-repository'
 alias pac='sudo pacman -S'
 alias rem='sudo pacman -R'
 
+alias proc='ps -e | grep'
+alias lanping='ping -c 3 webmail.iitk.ac.in'
+alias wanping='ping -c 3 www.google.com'
+
 # Mounting aliases
 alias DataDr='sudo mount /dev/sda6 /mnt'
 alias UData='sudo umount /dev/sda6'

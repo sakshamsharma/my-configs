@@ -1,0 +1,26 @@
+
+#----------- INSTALATION -----------#
+
+	1. Some files are hidden so in order to see them hit "Ctrl + H"——show hidden files!!
+
+	2. Install "curl".(Sudo apt-get install curl.)
+	
+	3. Install the "Raleway" font.(Provided in this conky.)
+	
+	4. Move the ".conky-vision-icons" folder into your home folder.
+	
+	5. Move the ".conkyrc" file into your home folder.
+	
+	6. Open the terminal and type "conky" to start your conky.
+	
+	7. To select your city for weather display open the ".conkyrc" file, search for "44418" and replace it with the WOEID(where on Earth ID) of your own location!
+	
+			To find your WOEID, search for your city from the Yahoo Weather home page("http://weather.yahoo.com").The WOEID is in the URL(page address at the top of your browser) for the forecast page for that city.
+			
+			
+#----------- MOVING THE CONKY -----------#
+
+	In order to move the conky around open the ".conkyrc" file and find the "gap_x" and "gap_y" lines.By manipulating these numbers you can move the conky around.
+	
+	Also, this conky has the "alignment" value set to "middle_middle" by default.
+	This means that the conky will be centered on your screen.To move it around you can also use negative values for "gap_x" and "gap_y"(e.g., gap_x -60), or you can comment the alignment value out(add a "#" in front of it).
