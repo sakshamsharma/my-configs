@@ -82,6 +82,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # CUSTOM COMMANDS
+export EDITOR=vim
 # GVim Alias
 alias gv='gvim'
 alias upd='sudo apt-get update'

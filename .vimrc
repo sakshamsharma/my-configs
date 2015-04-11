@@ -105,6 +105,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+map <C><tab> :bnext<return>
 
 set backspace=indent,eol,start
 set background=dark
