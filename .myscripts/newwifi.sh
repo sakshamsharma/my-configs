@@ -1,2 +1,3 @@
 #! /bin/bash
-rmmod rtl8723be && modprobe rtl8723be
+sudo rmmod rtl8723be
+sudo modprobe rtl8723be

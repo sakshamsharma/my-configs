@@ -55,6 +55,15 @@ Plugin 'sjl/gundo.vim'
 " Gentle auto-pairing
 Plugin 'vim-scripts/auto-pairs-gentle'
 
+" New autoclose plugin for vim
+"Plugin 'Townk/vim-autoclose'
+
+" Close tag for html. Use with Control + _
+Plugin 'vim-scripts/closetag.vim'
+
+" To move to closing tag of even html files with %
+Plugin 'edsono/vim-matchit'
+
 " Vim addons
 Plugin 'marcweber/vim-addon-mw-utils'
 
@@ -153,6 +162,9 @@ endif
 
 set t_Co=256
 set gfn=monofur\ for\ Powerline\ Regular\ 13
+
+set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
+set complete+=k
 
 if has('unix')
 	if !exists('g:airline_symbols')
