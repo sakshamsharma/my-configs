@@ -99,9 +99,10 @@ alias mywifi rtl8723be
 # Mounting aliases
 alias DataDr='sudo mount /dev/sda6 /mnt'
 alias UData='sudo umount /dev/sda6'
-alias UbuDr='sudo mount /dev/sda8 /mnt'
-alias UUbuDr='sudo umount /dev/sda8'
 
+# Shell plugin to correct commands
+alias fuck='$(thefuck $(fc -ln -1))'
+alias damn='$(thefuck $(fc -ln -1))'
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo

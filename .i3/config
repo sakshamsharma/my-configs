@@ -25,7 +25,7 @@ floating_modifier $mod
 
 # Startup
 # Setting wallpaper :D
-exec --no-startup-id feh --bg-fill ~/TSWall/5.jpg
+exec --no-startup-id feh --bg-fill ~/Wallpapers/acwd.png
 
 # Allowing horizontal scrolling
 exec synclient HorizEdgeScroll=1
@@ -34,7 +34,7 @@ exec synclient HorizTwoFingerScroll=1
 # Synapse
 exec --no-startup-id synapse
 
-exec --no-startup-id touchegg
+#exec --no-startup-id touchegg
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes
@@ -82,7 +82,7 @@ bindsym $mod+Shift+m exec i3-input -F 'mark %s' -P 'Mark name: '
 bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 
 # brightness control
-bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 10
+bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 6
 bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 
 # Nagbar
@@ -243,4 +243,6 @@ bar {
 }
 
 for_window [title="synapse"] border none
+for_window [title="conky"] border none
 for_window [class="Audacious"] floating enable
+for_window [class="conky"] floating enable

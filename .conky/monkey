@@ -4,7 +4,7 @@ out_to_console yes
 
 background no
 max_text_width 0
-update_interval 2.0
+update_interval 4.0
 total_run_times 0
 short_units on
 if_up_strictness address
@@ -14,8 +14,6 @@ cpu_avg_samples 4
 
 TEXT
 [
-	{ "full_text" : " Weather: ${execi 300 /home/sakshams/.conky/weather "ASI|IN|IN033|Lucknow" }",
-		"color" : "\#ffffff"},
 	{ "full_text" : "${if_up enp9s0} LAN: Down ${downspeed enp9s0} Up ${upspeed enp9s0} ${endif}" , "color" : "\#66ff99"},
 	{ "full_text" : "${if_up eth0} LAN: Down ${downspeed eth0} Up ${upspeed eth0} ${endif}" , "color" : "\#66ff99"},
 	{ "full_text" : "${if_up wlp8s0} WiFi: Down ${downspeed wlp8s0} Up ${upspeed wlp8s0} ${endif}" , "color" : "\#66ff09"},
