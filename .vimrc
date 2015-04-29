@@ -78,6 +78,7 @@ Plugin 'autoswap.vim'
 
 " Colors
 Plugin 'tomasr/molokai'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on
