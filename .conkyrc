@@ -1,102 +1,76 @@
-# Conky settings #
+# Sinuous Conky
+#
+# Copyright 2015 John Persano
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+#     you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+# Placement settings
+alignment top_right
+gap_x 10
+gap_y 10
+minimum_size 400 850
+maximum_width 800
+
+# Background settings
 background yes
-update_interval 1
+
+# Execution settings
+update_interval 2
+update_interval_on_battery 4
+total_run_times 0
+
+# Buffer settings
 double_buffer yes
 no_buffers yes
+text_buffer_size 1248
 
-# Window specifications #
-gap_x 0
-gap_y 0
-alignment middle_middle
-minimum_size 600 360
-maximum_width 600
+# Sample settings
+cpu_avg_samples 2
+
+# Font settings
+use_xft yes
+override_utf8_locale yes
+
+# Window settings
 own_window yes
 own_window_type normal
 own_window_transparent yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
-#own_window_argb_visual yes
-#own_window_argb_value 0
-#border_margin 0
-#border_inner_margin 0
-#border_outer_margin 0
+own_window_argb_visual yes 
+own_window_argb_value 0
+own_window_hints below, undecorated, sticky, skip_taskbar, skip_pager
 
-# Graphics settings #
+# Draw settings
 draw_shades no
-draw_outline no 
+draw_outline no
 draw_borders no
 draw_graph_borders no
 
-# Text settings #
-use_xft yes
-xftalpha 0
-xftfont Raleway:size=10
+# Load LUA
+lua_load ~/.lua.lua
+lua_draw_hook_pre ring_stats
 
-override_utf8_locale yes
-
-imlib_cache_size 0
-
-# Color scheme #
-default_color FFFFFF
-
-color1 FFFFFF
-
+# Where the magic happens
 TEXT
-\
-#-----WOIED-----#
-\
-\
-${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=44418&u=c" -o ~/.cache/weather.xml}\
-\
-\
-#---Clock+Date---#
-\
-\
-${font Raleway:weight=Light :size=100}${alignc}${time %H}${alignc}:${alignc}${time %M}
-${font Raleway:weight=Light:size=32}${voffset -60}${alignc}${time %A %B %d}\
-\
-\
-#---High Temperatures---#
-\
-\
-${font Raleway:size=20}\
-${voffset 76}${goto 40}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°
-${font Raleway:weight=Light:size=14}\
-${voffset -28}${goto 160}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°\
-${goto 270}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°\
-${goto 380}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°\
-${goto 490}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°\
-\
-\
-#---Low Temparatures---#
-\
-\
-${font Raleway:weight=Light:size=10}\
-${voffset 48}${goto 210}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°\
-${goto 320}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°\
-${goto 430}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°\
-${goto 540}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°\
-\
-\
-#---Name of the day---#
-\
-\
-${font Raleway:weight=Light:size=14}\
-${voffset 30}${goto 60}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1' | tr '[a-z]' '[A-Z]'}\
-${goto 170}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2' | tr '[a-z]' '[A-Z]'}\
-${goto 280}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3' | tr '[a-z]' '[A-Z]'}\
-${goto 390}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4' | tr '[a-z]' '[A-Z]'}\
-${goto 500}${execi 300 grep "yweather:forecast" ~/.cache/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5' | tr '[a-z]' '[A-Z]'}\
-\
-\
-#---Weather Icons---#
-\
-\
-${execi 300 cp -f ~/.conky/conky-vision-icons/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather-1.png}${image ~/.cache/weather-1.png -p 61,260 -s 32x32}\
-\
-${execi 300 cp -f ~/.conky/conky-vision-icons/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2').png ~/.cache/weather-2.png}${image ~/.cache/weather-2.png -p 171,260 -s 32x32}\
-\
-${execi 300 cp -f ~/.conky/conky-vision-icons/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3').png ~/.cache/weather-3.png}${image ~/.cache/weather-3.png -p 281,260 -s 32x32}\
-\
-${execi 300 cp -f ~/.conky/conky-vision-icons/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4').png ~/.cache/weather-4.png}${image ~/.cache/weather-4.png -p 391,260 -s 32x32}\
-\
-${execi 300 cp -f ~/.conky/conky-vision-icons/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5').png ~/.cache/weather-5.png}${image ~/.cache/weather-5.png -p 501,260 -s 32x32}${font}${voffset -46}\
+${offset 240}${voffset 240}${color #ffffff}${font Roboto Light:size=26}cpu
+${offset 265}${voffset -20}${color #ffffff}${font Roboto Light:size=12}${cpu cpu0}%
+
+${offset 240}${voffset 64}${color #ffffff}${font Roboto Light:size=26}ram
+${offset 265}${voffset -20}${color #ffffff}${font Roboto Light:size=12}${memperc}%
+
+${offset 240}${voffset 64}${color #ffffff}${font Roboto Light:size=26}tmp
+${offset 255}${voffset -20}${color #ffffff}${font Roboto Light:size=12}${hwmon 1 temp 1}°C
+
+${offset 240}${voffset 64}${color #ffffff}${font Roboto Light:size=26}bat
+${offset 260}${voffset -20}${color #ffffff}${font Roboto Light:size=12}${battery_percent BAT0}%
+
