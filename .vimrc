@@ -19,14 +19,14 @@ if has('unix')
   Plugin 'bling/vim-airline'
 endif
 
-" People might kill me for this.
-Plugin 'andrep/vimacs'
-
 " Git plugin
 Plugin 'tpope/vim-fugitive'
 
 " NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
 
 " Easy Motion
 Plugin 'Lokaltog/vim-easymotion'
@@ -76,6 +76,10 @@ Plugin 'tomtom/tlib_vim'
 " Vim auto stop with swap messages
 Plugin 'autoswap.vim'
 
+" Official PHP plugin for vim
+"Plugin '2072/PHP-Indenting-for-VIm'
+
+
 " Colors
 Plugin 'tomasr/molokai'
 Plugin 'derekwyatt/vim-scala'
@@ -99,6 +103,10 @@ nmap // <leader>ci
 nmap .. <leader><leader>w
 nmap ,, <leader><leader>b
 
+" NERDTree
+nmap <c-n> :NERDTreeToggle<return>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif	"To autoclose if only nerd left
+
 syntax on
 syntax enable
 set nowrap
@@ -114,6 +122,12 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 map <C><tab> :bnext<return>
+
+" Keyboard shortcuts for PHP + HTML
+" This one checks for errors with <F5>
+map <F5> :!php -l %<return>
+map <F7> :set ft=html<return>
+map <F8> :set ft=phtml<return>
 
 set backspace=indent,eol,start
 set background=dark
