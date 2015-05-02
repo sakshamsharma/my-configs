@@ -34,21 +34,20 @@ exec synclient TapButton1=1
 exec synclient TapButton2=2
 exec synclient TapButton3=3
 
-exec --no-startup-id synapse
+# Startup softwares
 exec --no-startup-id guake
+exec --no-startup-id nm-applet
+exec --no-startup-id i3-msg 'workspace 1; exec google-chrome-stable; workspace 3; exec hipchat; workspace 1'
+#exec --no-startup-id synapse
 #exec --no-startup-id touchegg
-exec /usr/lib/gnome-settings-daemon
 
-# All for NM - use it with nmtui for now
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id nm-applet
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes
 
 # Shortcuts
-# Firefox
-bindsym $mod+F1 exec firefox
+# Browser
+bindsym $mod+F1 exec google-chrome-unstable
 bindsym $mod+Shift+z [class="Firefox"] focus
 
 # Terminal
@@ -153,10 +152,10 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 # switch to workspace
-bindsym $mod+1 workspace $tag1
-bindsym $mod+2 workspace $tag2
-bindsym $mod+3 workspace $tag3
-bindsym $mod+4 workspace $tag4
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -165,10 +164,10 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $tag1
-bindsym $mod+Shift+2 move container to workspace $tag2
-bindsym $mod+Shift+3 move container to workspace $tag3
-bindsym $mod+Shift+4 move container to workspace $tag4
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
