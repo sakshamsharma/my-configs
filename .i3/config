@@ -30,22 +30,30 @@ exec --no-startup-id feh --bg-fill ~/Wallpapers/acwd.png
 # Allowing horizontal scrolling
 exec synclient HorizEdgeScroll=1
 exec synclient HorizTwoFingerScroll=1
+exec synclient TapButton1=1
+exec synclient TapButton2=2
+exec synclient TapButton3=3
 
-# Synapse
 exec --no-startup-id synapse
-
+exec --no-startup-id guake
 #exec --no-startup-id touchegg
+exec /usr/lib/gnome-settings-daemon
+
+# All for NM - use it with nmtui for now
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id nm-applet
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes
 
 # Shortcuts
 # Firefox
-bindsym $mod+F1 exec firefox-developer
+bindsym $mod+F1 exec firefox
 bindsym $mod+Shift+z [class="Firefox"] focus
 
 # Terminal
-bindsym Ctrl+$oth+T exec terminator
+bindsym Ctrl+$oth+T exec gnome-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # GVim
 bindsym $mod+F2 exec vim
@@ -59,8 +67,6 @@ bindsym $mod+F4 exec subl
 # Suspend
 bindsym $mod+F12 exec sudo pm-suspend
 
-# Wicd-gtk
-bindsym $mod+F6 exec wicd-gtk
 
 # Changing to hjkl
 bindsym $mod+h focus left
@@ -85,13 +91,6 @@ bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 6
 bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 
-# Nagbar
-bindsym $mod+F9 exec "i3-nagbar -t warning -m 'Edit system files' -b 'config' 'exec mousepad ~/.i3/config' -b 'i3status' 'exec mousepad ~/.i3/config'"
-
-# Toggling workspaces
-bindsym $oth+z workspace back_and_forth
-bindsym $oth+Shift+z move container to workspace back_and_forth;
-
 # Volume 
 #set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink -- +4%
@@ -100,15 +99,25 @@ bindsym $oth+Shift+z move container to workspace back_and_forth;
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
 
-# start a terminal
-bindsym $mod+Return exec gnome-terminal
+
+# Toggling workspaces
+bindsym $oth+z workspace back_and_forth
+bindsym $oth+Shift+z move container to workspace back_and_forth;
+
+# gnome logout
+bindsym $mod+Shift+X exec gnome-session-quit --logout
+
+# gnome poweroff menu including suspend, etc.
+bindsym $mod+Mod1+x exec gnome-session-quit --power-off
+
+# Nagbar
+bindsym $mod+F9 exec "i3-nagbar -t warning -m 'Edit system files' -b 'config' 'exec mousepad ~/.i3/config' -b 'i3status' 'exec mousepad ~/.i3/config'"
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-#bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop
 
 # change focus
@@ -225,21 +234,18 @@ bindsym $mod+Pause mode "$mode_system"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-		mode dock
-		#position top
-		workspace_buttons yes
-		#status_command i3status -c ~/.i3/i3status
-		status_command ~/.conky/initscript
-		#status_command i3blocks
-		#status_command ~/.i3/dzen2.sh
-		#font -*-terminus-medium-r-*-*-18-*-*-*-*-*-iso10646-*
-		tray_output LVDS
-		colors{
-			background #232323
-				statusline #DCDCDC
-		}
 
+bar {
+		#status_command i3status
+		status_command ~/.conky/initscript
+        colors {
+            # solarized
+            background #073642
+            statusline #eee8d5
+            focused_workspace #cb4b16 #cb4b16 #eee8d5
+            active_workspace #cb4b16 #cb4b16 #eee8d5
+            inactive_workspace #b58900 #b58900 #eee8d5
+        }
 }
 
 for_window [title="synapse"] border none

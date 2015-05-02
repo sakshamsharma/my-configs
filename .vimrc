@@ -78,6 +78,7 @@ Plugin 'autoswap.vim'
 
 " Official PHP plugin for vim
 "Plugin '2072/PHP-Indenting-for-VIm'
+Plugin '2072/vim-syntax-for-PHP'
 
 
 " Colors
@@ -128,6 +129,9 @@ map <C><tab> :bnext<return>
 map <F5> :!php -l %<return>
 map <F7> :set ft=html<return>
 map <F8> :set ft=phtml<return>
+
+" To toggle the PHP tags in a markdown file meant for parsedown
+map <F9> magg2//G//`a:w<return>
 
 set backspace=indent,eol,start
 set background=dark
