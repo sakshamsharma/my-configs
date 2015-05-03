@@ -11,6 +11,7 @@ Basic requirements (assuming standard installations already present):
 4. create-ap package for WiFi hotspot.
 
 Contents:
+
 1. i3 config (A good way to start with i3 would be to look at things you can do in your config).
 2. vimrc with plugins handled with Vundle. Run ':PluginInstall' after cloning in vim to pull all plugins. That's it.
 3. zshrc (with oh-my-zsh and another config without it) and a bashrc with aliases indispensible to me.

@@ -47,7 +47,7 @@ workspace_auto_back_and_forth yes
 
 # Shortcuts
 # Browser
-bindsym $mod+F1 exec google-chrome-unstable
+bindsym $mod+F1 exec google-chrome-stable
 bindsym $mod+Shift+z [class="Firefox"] focus
 
 # Terminal
