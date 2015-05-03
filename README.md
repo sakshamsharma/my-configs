@@ -1,16 +1,16 @@
 # my-rc-files
 Contains my rc files
 
-Run ./.myscripts/add_rc.sh to stage new changes.
+Run **./.myscripts/add_rc.sh** to stage new changes.
 
-Basic requirements (assuming standard installations already present):
+**Basic requirements** (assuming standard installations already present):
 
 1. Curl for Vundle.
 2. Vundle (use git clone).
 3. Powerline fonts (for Linux/Unix based systems for airline, included in this repo, just change the terminal font.).
 4. create-ap package for WiFi hotspot.
 
-Contents:
+**Contents:**
 
 1. i3 config (A good way to start with i3 would be to look at things you can do in your config).
 2. vimrc with plugins handled with Vundle. Run ':PluginInstall' after cloning in vim to pull all plugins. That's it.
