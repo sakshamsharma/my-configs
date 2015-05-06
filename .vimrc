@@ -43,6 +43,9 @@ Plugin 'vim-scripts/AutoComplPop'
 " Surround
 Plugin 'tpope/vim-surround'
 
+" Supertab
+Plugin 'ervandew/supertab'
+
 " Enhanced CPP Highlights
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
@@ -68,10 +71,10 @@ Plugin 'edsono/vim-matchit'
 Plugin 'marcweber/vim-addon-mw-utils'
 
 " Snipmate
-Plugin 'garbas/vim-snipmate'
+"Plugin 'garbas/vim-snipmate'
 
 " Needed for snipmate
-Plugin 'tomtom/tlib_vim'
+"Plugin 'tomtom/tlib_vim'
 
 " Vim auto stop with swap messages
 Plugin 'autoswap.vim'
@@ -132,6 +135,9 @@ map <F8> :set ft=phtml<return>
 
 " To toggle the PHP tags in a markdown file meant for parsedown
 map <F9> magg2//G//`a:w<return>
+
+" For scala
+map <F3> :!scalac %<return>:redraw!<return>:!scala %:r<return>
 
 set backspace=indent,eol,start
 set background=dark

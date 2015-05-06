@@ -85,3 +85,5 @@ source ~/.myscripts/zshsource
 export NVM_DIR="/home/saksham/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+export PATH=/home/saksham/arcanist/bin:$PATH    

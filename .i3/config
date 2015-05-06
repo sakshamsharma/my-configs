@@ -37,7 +37,6 @@ exec synclient TapButton3=3
 # Startup softwares
 exec --no-startup-id guake
 exec --no-startup-id nm-applet
-exec --no-startup-id i3-msg 'workspace 1; exec google-chrome-stable; workspace 3; exec hipchat; workspace 1'
 #exec --no-startup-id synapse
 #exec --no-startup-id touchegg
 
@@ -53,6 +52,9 @@ bindsym $mod+Shift+z [class="Firefox"] focus
 # Terminal
 bindsym Ctrl+$oth+T exec gnome-terminal
 bindsym $mod+Return exec gnome-terminal
+
+# Screenshot
+bindsym Ctrl+$oth+W exec gnome-screenshot
 
 # GVim
 bindsym $mod+F2 exec vim
