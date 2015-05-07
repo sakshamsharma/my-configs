@@ -77,3 +77,4 @@ fi
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 
+export COOKIE="Cookie: id=saksham0808; timestamp=1430940663; auth=D546C5E71058DF8BDEF97D94CD8831D1E4598109"
