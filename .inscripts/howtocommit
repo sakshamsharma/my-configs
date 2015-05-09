@@ -1,0 +1,222 @@
+ saksham   master ●  cd ixchel  
+ ixchel  ➦ 3cb1901  vim core/src/main/scala/org.gmantra.ixchel/base/models/ix/instances.scala 
+ ixchel  ➦ 3cb1901  vim async/src/main/scala/org.gmantra.ixchel/actor/Renderer.scala 
+ ixchel  ➦ 3cb1901  vim core/src/main/scala/org.gmantra.ixchel/base/models/C
+ ixchel  ➦ 3cb1901  vim core/src/main/scala/org.gmantra.ixchel/base/models/Collection.scala 
+ ixchel  ➦ 3cb1901  ls
+async      core        http    project    relay  src  target
+build.sbt  HACKING.md  macros  README.md  seed   sse  tasks
+ ixchel  ➦ 3cb1901  ls core/src/main/scala/org.gmantra.ixchel/base/models/                
+Action.scala      crud      ix             StreamItem.scala  UUID.scala
+Collection.scala  Id.scala  package.scala  User.scala
+ ixchel  ➦ 3cb1901  vim core/src/main/scala/org.gmantra.ixchel/base/models/Collection.scala
+ ✘  ixchel  ➦ 3cb1901  
+ ✘  ixchel  ➦ 3cb1901  
+ ✘  ixchel  ➦ 3cb1901  cd ..
+ saksham   master ●  vim start_hotspot.sh 
+ ✘  saksham   master ●  cd ixchel 
+ ixchel  ➦ 3cb1901  vim project/IxchelBuild.scala 
+ ixchel  ➦ 3cb1901  vim async/src/main/scala/org.gmantra.ixchel/actor/Renderer.scala         
+ ixchel  ➦ 3cb1901  vim core/src/main/scala/org.gmantra.ixchel/base/models/ix/instances.scala
+ ixchel  ➦ 3cb1901  vim async/src/main/scala/org.gmantra.ixchel/actor/Renderer.scala         
+ ixchel  ➦ 3cb1901  git status                                                               
+HEAD detached at vikraman/unidoc
+nothing to commit, working directory clean
+ ixchel  ➦ 3cb1901  vim project/IxchelBuild.scala 
+ ixchel  ➦ 3cb1901 ●  vim project/IxchelBuild.scala
+
+
+
+
+
+ ixchel  ➦ 3cb1901 ●  vim project/IxchelBuild.scala
+ ixchel  ➦ 3cb1901 ●  vim project/IxchelBuild.scala
+ ixchel  ➦ 3cb1901 ●  vim project/IxchelBuild.scala
+ ixchel  ➦ 3cb1901 ●  git diff
+ ixchel  ➦ 3cb1901 ●  git add project/IxchelBuild.scala 
+ ixchel  ➦ 3cb1901 ✚  git commit 
+Aborting commit due to empty commit message.
+ ✘  ixchel  ➦ 3cb1901 ✚  git commit --amend  
+[detached HEAD 7c0a941] Use sbt-unidoc to generate unified scaladoc
+ Author: Vikraman Choudhury <git@vikraman.org>
+ Date: Wed May 6 01:06:59 2015 +0530
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+ ixchel  ➦ 7c0a941  git push origin feat/unidoc
+error: src refspec feat/unidoc does not match any.
+error: failed to push some refs to 'https://saksham0808@github.com/saksham0808/ixchel.git'
+ ✘  ixchel  ➦ 7c0a941  git push origin feat/unidoc 
+ ✘  ixchel  ➦ 7c0a941  
+ ✘  ixchel  ➦ 7c0a941  git checkout -b feat/unidoc
+Switched to a new branch 'feat/unidoc'
+ ixchel   feat/unidoc  git push origin feat/unidoc
+Password for 'https://saksham0808@github.com': 
+Counting objects: 19, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (19/19), 1.84 KiB | 0 bytes/s, done.
+Total 19 (delta 12), reused 5 (delta 0)
+To https://saksham0808@github.com/saksham0808/ixchel.git
+ * [new branch]      feat/unidoc -> feat/unidoc
+ ixchel   feat/unidoc  arc diff
+PHP Warning:  ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+
+Warning: ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+[2015-05-08 15:37:27] ERROR 2: file_exists(): open_basedir restriction in effect. File(/etc/arcconfig) is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) at [/home/saksham/libphutil/src/filesystem/Filesystem.php:885]
+arcanist(head=master, ref.master=a4d33ef117aa), phutil(head=master, ref.master=00e1f2da2829)
+  #0 file_exists(string) called at [<phutil>/src/filesystem/Filesystem.php:885]
+  #1 Filesystem::pathExists(string) called at [<arcanist>/src/configuration/ArcanistConfigurationManager.php:286]
+  #2 ArcanistConfigurationManager::readSystemArcConfig() called at [<arcanist>/scripts/arcanist.php:100]
+[2015-05-08 15:37:27] ERROR 2: is_link(): open_basedir restriction in effect. File(/etc/arcconfig) is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) at [/home/saksham/libphutil/src/filesystem/Filesystem.php:885]
+arcanist(head=master, ref.master=a4d33ef117aa), phutil(head=master, ref.master=00e1f2da2829)
+  #0 is_link(string) called at [<phutil>/src/filesystem/Filesystem.php:885]
+  #1 Filesystem::pathExists(string) called at [<arcanist>/src/configuration/ArcanistConfigurationManager.php:286]
+  #2 ArcanistConfigurationManager::readSystemArcConfig() called at [<arcanist>/scripts/arcanist.php:100]
+ Select a Default Commit Range 
+
+You're running a command which operates on a range of revisions (usually,
+from some revision to HEAD) but have not specified the revision that should
+determine the start of the range.
+
+Previously, arc assumed you meant 'HEAD^' when you did not specify a start
+revision, but this behavior does not make much sense in most workflows
+outside of Facebook's historic git-svn workflow.
+
+arc no longer assumes 'HEAD^'. You must specify a relative commit explicitly
+when you invoke a command (e.g., `arc diff HEAD^`, not just `arc diff`) or
+select a default for this working copy.
+
+In most cases, the best default is 'origin/master'. You can also select
+'HEAD^' to preserve the old behavior, or some other remote or branch. But you
+almost certainly want to select 'origin/master'.
+
+(Technically: the merge-base of the selected revision and HEAD is used to
+determine the start of the commit range.)
+
+    What default do you want to use? [origin/master] 
+^C
+ ✘  ixchel   feat/unidoc  arc diff
+PHP Warning:  ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+
+Warning: ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+[2015-05-08 15:37:38] ERROR 2: file_exists(): open_basedir restriction in effect. File(/etc/arcconfig) is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) at [/home/saksham/libphutil/src/filesystem/Filesystem.php:885]
+arcanist(head=master, ref.master=a4d33ef117aa), phutil(head=master, ref.master=00e1f2da2829)
+  #0 file_exists(string) called at [<phutil>/src/filesystem/Filesystem.php:885]
+  #1 Filesystem::pathExists(string) called at [<arcanist>/src/configuration/ArcanistConfigurationManager.php:286]
+  #2 ArcanistConfigurationManager::readSystemArcConfig() called at [<arcanist>/scripts/arcanist.php:100]
+[2015-05-08 15:37:38] ERROR 2: is_link(): open_basedir restriction in effect. File(/etc/arcconfig) is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) at [/home/saksham/libphutil/src/filesystem/Filesystem.php:885]
+arcanist(head=master, ref.master=a4d33ef117aa), phutil(head=master, ref.master=00e1f2da2829)
+  #0 is_link(string) called at [<phutil>/src/filesystem/Filesystem.php:885]
+  #1 Filesystem::pathExists(string) called at [<arcanist>/src/configuration/ArcanistConfigurationManager.php:286]
+  #2 ArcanistConfigurationManager::readSystemArcConfig() called at [<arcanist>/scripts/arcanist.php:100]
+tCommit message has errors:
+
+      - Invalid or missing field "Test Plan": You must provide a test plan.
+      Describe the actions you performed to verify the behavior of this
+      change.
+
+You must resolve these errors to continue.
+
+    Do you want to edit the message? [Y/n] ig^C
+ ✘  ixchel   feat/unidoc  
+ ✘  ixchel   feat/unidoc  tig
+ ixchel   feat/unidoc  git fetch hackcave
+Username for 'https://github.com': saksham0808
+Password for 'https://saksham0808@github.com': 
+ ixchel   feat/unidoc  arc diff hackcave/master
+PHP Warning:  ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+
+Warning: ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+[2015-05-08 15:40:07] ERROR 2: file_exists(): open_basedir restriction in effect. File(/etc/arcconfig) is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) at [/home/saksham/libphutil/src/filesystem/Filesystem.php:885]
+arcanist(head=master, ref.master=a4d33ef117aa), phutil(head=master, ref.master=00e1f2da2829)
+  #0 file_exists(string) called at [<phutil>/src/filesystem/Filesystem.php:885]
+  #1 Filesystem::pathExists(string) called at [<arcanist>/src/configuration/ArcanistConfigurationManager.php:286]
+  #2 ArcanistConfigurationManager::readSystemArcConfig() called at [<arcanist>/scripts/arcanist.php:100]
+[2015-05-08 15:40:07] ERROR 2: is_link(): open_basedir restriction in effect. File(/etc/arcconfig) is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/) at [/home/saksham/libphutil/src/filesystem/Filesystem.php:885]
+arcanist(head=master, ref.master=a4d33ef117aa), phutil(head=master, ref.master=00e1f2da2829)
+  #0 is_link(string) called at [<phutil>/src/filesystem/Filesystem.php:885]
+  #1 Filesystem::pathExists(string) called at [<arcanist>/src/configuration/ArcanistConfigurationManager.php:286]
+  #2 ArcanistConfigurationManager::readSystemArcConfig() called at [<arcanist>/scripts/arcanist.php:100]
+You have a saved revision message in '.git/arc/create-message'.
+Message begins:
+
+       Use sbt-unidoc to generate unified scaladoc
+
+You can use this message, or discard it.
+
+    Do you want to use this message? [Y/n] y
+
+Commit message has errors:
+
+      - Invalid or missing field "Test Plan": You must provide a test plan.
+      Describe the actions you performed to verify the behavior of this
+      change.
+
+You must resolve these errors to continue.
+
+    Do you want to edit the message? [Y/n] ^C
+ ✘  ixchel   feat/unidoc  cd /etc                 
+ /etc  find . -name 'php.ini'
+find: `./polkit-1/rules.d': Permission denied
+find: `./samba/private': Permission denied
+./php/php.ini
+find: `./pacman.d/gnupg/openpgp-revocs.d': Permission denied
+find: `./pacman.d/gnupg/private-keys-v1.d': Permission denied
+find: `./docker': Permission denied
+find: `./sudoers.d': Permission denied
+ ✘  /etc  sudo 
+ ✘  /etc  
+ ✘  /etc  cd php/       
+ php  vim php.ini 
+ php  vim php.ini
+ php  vim ~/libphutil/scripts/__init_script__.php 
+ php  vim php.ini                                
+ php  cd ~/ixchel                                
+ ixchel   feat/unidoc  arc diff
+PHP Warning:  ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+
+Warning: ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+You have a saved revision message in '.git/arc/create-message'.
+Message begins:
+
+       Use sbt-unidoc to generate unified scaladoc
+
+You can use this message, or discard it.
+
+    Do you want to use this message? [Y/n] y
+
+Commit message has errors:
+
+      - Invalid or missing field "Test Plan": You must provide a test plan.
+      Describe the actions you performed to verify the behavior of this
+      change.
+
+You must resolve these errors to continue.
+
+    Do you want to edit the message? [Y/n] ^C
+ ✘  ixchel   feat/unidoc  arc diff hackcave/master
+PHP Warning:  ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+
+Warning: ini_set(): open_basedir restriction in effect. File() is not within the allowed path(s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/) in /home/saksham/libphutil/scripts/__init_script__.php on line 52
+You have a saved revision message in '.git/arc/create-message'.
+Message begins:
+
+       Use sbt-unidoc to generate unified scaladoc
+
+You can use this message, or discard it.
+
+    Do you want to use this message? [Y/n] n
+
+Linting...
+ LINT OKAY  No lint problems.
+Running unit tests...
+No unit test engine is configured for this project.
+Created a new Differential revision:
+        Revision URI: https://reviews.gmantra.org/D23
+
+Included changes:
+  M       core/src/main/scala/org.gmantra.ixchel/base/models/ix/IXOp.scala
+  M       core/src/main/scala/org.gmantra.ixchel/base/models/ix/instances.scala
+  M       core/src/main/scala/org.gmantra.ixchel/base/models/ix/package.scala
+  M       project/IxchelBuild.scala
+  M       project/plugins.sbt
+ ixchel   feat/unidoc  

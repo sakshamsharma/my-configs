@@ -1,0 +1,13 @@
+[Added Associations]
+application/xhtml+xml=firefox.desktop;
+image/png=gthumb.desktop;eog.desktop;
+text/plain=gvim.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=playonlinux-Microsoft Word 2010.desktop;wine-extension-dot.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.slideshow=playonlinux-Microsoft Powerpoint 2010.desktop;
+image/jpeg=eog.desktop;gthumb.desktop;
+application/pdf=zathura-pdf-mupdf.desktop;evince.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=playonlinux-Microsoft Powerpoint 2010.desktop;
+audio/mpeg=mplayer.desktop;
+video/x-matroska=org.gnome.Totem.desktop;
+application/x-cd-image=gnome-disk-image-mounter.desktop;org.gnome.FileRoller.desktop;
+video/x-msvideo=vlc.desktop;

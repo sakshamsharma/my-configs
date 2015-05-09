@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Repository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MonoDevelop Add-in Repository (Beta channel)</Name>
+  <Url>http://addins.monodevelop.com/Beta/Linux/5.7.1/root.mrep</Url>
+  <Addin>
+    <Url>AutoTest.MDAddin.AutoTestMDAddin-1.0.2.mpack</Url>
+    <Addin>
+      <Id>AutoTestMDAddin</Id>
+      <Namespace>AutoTest.MDAddin</Namespace>
+      <Name>AutoTest.NET MonoDevelop Addin</Name>
+      <Version>1.0.2</Version>
+      <BaseVersion />
+      <Author>Eberhard Beilharz</Author>
+      <Copyright>MIT/X11</Copyright>
+      <Url>http://www.continuoustests.com</Url>
+      <Description>Integrates AutoTest.NET into MonoDevelop</Description>
+      <Category>Testing</Category>
+      <Dependencies />
+      <OptionalDependencies />
+      <Properties>
+        <Property name="DownloadSize">26536</Property>
+      </Properties>
+    </Addin>
+  </Addin>
+  <Addin>
+    <Url>MonoDevelop.D.Debugging.Gdb-1.2.10.mpack</Url>
+    <Addin>
+      <Id>MonoDevelop.D.Debugging.Gdb</Id>
+      <Namespace />
+      <Name>D Language Debugging Support under GNU/Linux (GDB)</Name>
+      <Version>1.2.10</Version>
+      <BaseVersion />
+      <Author>Ludovit Lucenic, Alexander Bothe</Author>
+      <Copyright>MIT X11</Copyright>
+      <Url>https://github.com/llucenic/MonoDevelop.Debugger.Gdb.D</Url>
+      <Description>D Language debugging support based on GNU Debugger support for GNU/Linux platform.</Description>
+      <Category>Debugging</Category>
+      <Dependencies />
+      <OptionalDependencies />
+      <Properties>
+        <Property name="DownloadSize">36145</Property>
+      </Properties>
+    </Addin>
+  </Addin>
+  <Addin>
+    <Url>MonoDevelop.Refactoring.Unity-5.0.mpack</Url>
+    <Addin>
+      <Id>MonoDevelop.Refactoring.Unity</Id>
+      <Namespace />
+      <Name>MonoDevelop.Refactoring.Unity</Name>
+      <Version>5.0</Version>
+      <BaseVersion />
+      <Author>makarov@alternativaplatform.com</Author>
+      <Copyright>Copyrigth (c) 2014 AlternativaPlatform.com</Copyright>
+      <Url>https://github.com/sergerus/MonoDevelop.Refactoring.Unity</Url>
+      <Description>Tracks file operations and handle Unity3d meta files.</Description>
+      <Category>IDE extensions</Category>
+      <Dependencies />
+      <OptionalDependencies />
+      <Properties>
+        <Property name="DownloadSize">6128</Property>
+      </Properties>
+    </Addin>
+  </Addin>
+  <Addin>
+    <Url>ServiceStackXS.ServiceStackXS-0.2.mpack</Url>
+    <Addin>
+      <Id>ServiceStackXS</Id>
+      <Namespace>ServiceStackXS</Namespace>
+      <Name>ServiceStackXS</Name>
+      <Version>0.2</Version>
+      <BaseVersion />
+      <Author>ServiceStack</Author>
+      <Copyright>ServiceStack</Copyright>
+      <Url>https://github.com/ServiceStack/ServiceStackVS</Url>
+      <Description>An extension to work with the ServiceStack framework.</Description>
+      <Category>IDE extensions</Category>
+      <Dependencies>
+        <AddinDependency>
+          <AddinId>::MonoDevelop.Ide</AddinId>
+          <Version>5.0</Version>
+        </AddinDependency>
+        <AddinDependency>
+          <AddinId>::MonoDevelop.Core</AddinId>
+          <Version>5.0</Version>
+        </AddinDependency>
+      </Dependencies>
+      <OptionalDependencies />
+      <Properties>
+        <Property name="Name">ServiceStackXS</Property>
+        <Property name="Description">An extension to work with the ServiceStack framework.</Property>
+        <Property name="Author">ServiceStack</Property>
+        <Property name="Url">https://github.com/ServiceStack/ServiceStackVS</Property>
+        <Property name="Icon32">logo_32x32.png</Property>
+        <Property name="DownloadSize">365113</Property>
+      </Properties>
+    </Addin>
+  </Addin>
+  <Addin>
+    <Url>Unity.Utilities-5.0.mpack</Url>
+    <Addin>
+      <Id>Unity.Utilities</Id>
+      <Namespace />
+      <Name>Utilities for use with Unity</Name>
+      <Version>5.0</Version>
+      <BaseVersion />
+      <Author>Levi Bard</Author>
+      <Copyright>MIT X11</Copyright>
+      <Url>http://github.com/Unity-Technologies/MonoDevelop.Debugger.Soft.Unity</Url>
+      <Description>Utilities for use with Unity</Description>
+      <Category>Unity</Category>
+      <Dependencies />
+      <OptionalDependencies />
+      <Properties>
+        <Property name="DownloadSize">7184</Property>
+      </Properties>
+    </Addin>
+  </Addin>
+  <Addin>
+    <Url>VimAddin.VimAddin-1.1.7.mpack</Url>
+    <Addin>
+      <Id>VimAddin</Id>
+      <Namespace>VimAddin</Namespace>
+      <Name>VimAddin</Name>
+      <Version>1.1.11</Version>
+      <BaseVersion />
+      <Author>atsui</Author>
+      <Copyright>atsui</Copyright>
+      <Url />
+      <Description>A fork of MonoDevelop vi modes. See https://github.com/alextsui05/VimAddin</Description>
+      <Category>IDE extensions</Category>
+      <Dependencies>
+        <AddinDependency>
+          <AddinId>::MonoDevelop.Ide</AddinId>
+          <Version>5.0</Version>
+        </AddinDependency>
+        <AddinDependency>
+          <AddinId>::MonoDevelop.Core</AddinId>
+          <Version>5.0</Version>
+        </AddinDependency>
+      </Dependencies>
+      <OptionalDependencies />
+      <Properties>
+        <Property name="DownloadSize">38139</Property>
+      </Properties>
+    </Addin>
+  </Addin>
+</Repository>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="style" mtime="1430327746" type="string">
+		<stringvalue>monofur for Powerline 13</stringvalue>
+	</entry>
+</gconf>

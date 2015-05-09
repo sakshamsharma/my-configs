@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ephy="http://gnome.org/ns/epiphany#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <channel rdf:about="file:///home/saksham/.config/epiphany/bookmarks.rdf">
+    <title>Web bookmarks</title>
+    <link>https://wiki.gnome.org/Apps/Web</link>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="https://duckduckgo.com"/>
+        <rdf:li rdf:resource="http://172.27.18.57:8080/"/>
+        <rdf:li rdf:resource="http://172.27.18.45:5800/"/>
+        <rdf:li rdf:resource="http://172.27.16.5:80/"/>
+        <rdf:li rdf:resource="http://172.27.16.8:80/"/>
+        <rdf:li rdf:resource="http://172.27.17.224:80/"/>
+        <rdf:li rdf:resource="http://172.27.16.21:80/"/>
+        <rdf:li rdf:resource="ftp://172.27.16.21:21/"/>
+        <rdf:li rdf:resource="http://172.27.21.57:5800/"/>
+        <rdf:li rdf:resource="http://172.27.17.94:80/"/>
+        <rdf:li rdf:resource="http://172.27.17.220:80/"/>
+        <rdf:li rdf:resource="http://172.27.21.41:5800/"/>
+        <rdf:li rdf:resource="http://172.27.18.14:5800/"/>
+        <rdf:li rdf:resource="http://172.27.3.10:80/"/>
+        <rdf:li rdf:resource="http://172.27.19.3:49807/"/>
+        <rdf:li rdf:resource="http://172.27.20.124:5800/"/>
+        <rdf:li rdf:resource="http://172.27.16.30:80/"/>
+        <rdf:li rdf:resource="ftp://172.27.16.30:21/"/>
+        <rdf:li rdf:resource="http://172.27.22.50:5800/"/>
+        <rdf:li rdf:resource="http://172.27.17.218:80/"/>
+        <rdf:li rdf:resource="http://172.27.20.215:5800/"/>
+        <rdf:li rdf:resource="http://172.27.19.54:5800/"/>
+        <rdf:li rdf:resource="http://172.27.21.56:5800/"/>
+        <rdf:li rdf:resource="http://172.27.17.39:80/"/>
+        <rdf:li rdf:resource="http://172.27.17.223:80/"/>
+        <rdf:li rdf:resource="http://172.27.17.228:80/"/>
+        <rdf:li rdf:resource="http://172.27.22.251:80/config/authentication_page.htm"/>
+        <rdf:li rdf:resource="http://172.27.18.33:5800/"/>
+        <rdf:li rdf:resource="http://172.27.18.83:5800/"/>
+        <rdf:li rdf:resource="http://172.27.17.219:80/"/>
+        <rdf:li rdf:resource="http://172.27.17.225:80/"/>
+        <rdf:li rdf:resource="http://172.27.22.12:5800/"/>
+        <rdf:li rdf:resource="http://172.27.30.243:8083/"/>
+        <rdf:li rdf:resource="http://172.27.17.217:80/"/>
+        <rdf:li rdf:resource="http://172.27.30.160:80/"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="https://duckduckgo.com">
+    <title>Search the web</title>
+    <link>https://duckduckgo.com</link>
+    <ephy:smartlink>https://duckduckgo.com/?q=%s&amp;t=epiphany</ephy:smartlink>
+  </item>
+  <item rdf:about="http://172.27.18.57:8080/">
+    <title>tgandhi</title>
+    <link>http://172.27.18.57:8080/</link>
+  </item>
+  <item rdf:about="http://172.27.18.45:5800/">
+    <title>agrawala's remote desktop on agrawala-BM1AF-BP1AF-BM6AF</title>
+    <link>http://172.27.18.45:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.16.5:80/">
+    <title>HP Color LaserJet 2605dn (8F9EC6)</title>
+    <link>http://172.27.16.5:80/</link>
+  </item>
+  <item rdf:about="http://172.27.16.8:80/">
+    <title>hp LaserJet 1320 series (CE1286)</title>
+    <link>http://172.27.16.8:80/</link>
+  </item>
+  <item rdf:about="http://172.27.17.224:80/">
+    <title>HP LaserJet Professional P1606dn [92C0CA]</title>
+    <link>http://172.27.17.224:80/</link>
+  </item>
+  <item rdf:about="http://172.27.16.21:80/">
+    <title>HP LaserJet P3005 [199DEB]</title>
+    <link>http://172.27.16.21:80/</link>
+  </item>
+  <item rdf:about="ftp://172.27.16.21:21/">
+    <title>HP LaserJet P3005 [199DEB]</title>
+    <link>ftp://172.27.16.21:21/</link>
+  </item>
+  <item rdf:about="http://172.27.21.57:5800/">
+    <title>lms1's remote desktop on lms1</title>
+    <link>http://172.27.21.57:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.17.94:80/">
+    <title>Xerox WorkCentre 7220 (9C:93:4E:51:1B:DC)</title>
+    <link>http://172.27.17.94:80/</link>
+  </item>
+  <item rdf:about="http://172.27.17.220:80/">
+    <title>HP LaserJet Professional P1606dn [913690]</title>
+    <link>http://172.27.17.220:80/</link>
+  </item>
+  <item rdf:about="http://172.27.21.41:5800/">
+    <title>lms's remote desktop on lms</title>
+    <link>http://172.27.21.41:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.18.14:5800/">
+    <title>pawan's remote desktop on pawan1</title>
+    <link>http://172.27.18.14:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.3.10:80/">
+    <title>hp LaserJet 4250 [0C5D24]</title>
+    <link>http://172.27.3.10:80/</link>
+  </item>
+  <item rdf:about="http://172.27.19.3:49807/">
+    <title>csews3</title>
+    <link>http://172.27.19.3:49807/</link>
+  </item>
+  <item rdf:about="http://172.27.20.124:5800/">
+    <title>sayantan's remote desktop on sayantan-PC</title>
+    <link>http://172.27.20.124:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.16.30:80/">
+    <title>HP LaserJet P3005 [23DF1A]</title>
+    <link>http://172.27.16.30:80/</link>
+  </item>
+  <item rdf:about="ftp://172.27.16.30:21/">
+    <title>HP LaserJet P3005 [23DF1A]</title>
+    <link>ftp://172.27.16.30:21/</link>
+  </item>
+  <item rdf:about="http://172.27.22.50:5800/">
+    <title>subbarao's remote desktop on subbarao-PC</title>
+    <link>http://172.27.22.50:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.17.218:80/">
+    <title>HP LaserJet Professional P1606dn [92C73F]</title>
+    <link>http://172.27.17.218:80/</link>
+  </item>
+  <item rdf:about="http://172.27.20.215:5800/">
+    <title>jacob's remote desktop on jacob-BM1AF-BP1AF-BM6AF</title>
+    <link>http://172.27.20.215:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.19.54:5800/">
+    <title>piyushkr's remote desktop on csews54</title>
+    <link>http://172.27.19.54:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.21.56:5800/">
+    <title>talim's remote desktop on talim</title>
+    <link>http://172.27.21.56:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.17.39:80/">
+    <title>Samsung SCX-4623 Series (SEC00159995FF4D)</title>
+    <link>http://172.27.17.39:80/</link>
+  </item>
+  <item rdf:about="http://172.27.17.223:80/">
+    <title>HP LaserJet Professional P1606dn [92BFA0]</title>
+    <link>http://172.27.17.223:80/</link>
+  </item>
+  <item rdf:about="http://172.27.17.228:80/">
+    <title>HP LaserJet Professional P1606dn [0DE503]</title>
+    <link>http://172.27.17.228:80/</link>
+  </item>
+  <item rdf:about="http://172.27.22.251:80/config/authentication_page.htm">
+    <title>switchbc8dd4-4</title>
+    <link>http://172.27.22.251:80/config/authentication_page.htm</link>
+  </item>
+  <item rdf:about="http://172.27.18.33:5800/">
+    <title>saurabh's remote desktop on SAURABH-PC</title>
+    <link>http://172.27.18.33:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.18.83:5800/">
+    <title>genie's remote desktop on genie</title>
+    <link>http://172.27.18.83:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.17.219:80/">
+    <title>HP LaserJet Professional P1606dn [92CC65]</title>
+    <link>http://172.27.17.219:80/</link>
+  </item>
+  <item rdf:about="http://172.27.17.225:80/">
+    <title>HP LaserJet Professional P1606dn</title>
+    <link>http://172.27.17.225:80/</link>
+  </item>
+  <item rdf:about="http://172.27.22.12:5800/">
+    <title>chrt's remote desktop on ubuntu</title>
+    <link>http://172.27.22.12:5800/</link>
+  </item>
+  <item rdf:about="http://172.27.30.243:8083/">
+    <title>TZC4FW260W00004</title>
+    <link>http://172.27.30.243:8083/</link>
+  </item>
+  <item rdf:about="http://172.27.17.217:80/">
+    <title>HP LaserJet Professional P1606dn [92C0C3]</title>
+    <link>http://172.27.17.217:80/</link>
+  </item>
+  <item rdf:about="http://172.27.30.160:80/">
+    <title>Brother MFC-9140CDN</title>
+    <link>http://172.27.30.160:80/</link>
+  </item>
+</rdf:RDF>
