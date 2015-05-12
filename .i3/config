@@ -68,10 +68,6 @@ bindsym $mod+F3 exec nautilus
 # Sublime
 bindsym $mod+F4 exec subl
 
-# Suspend
-bindsym $mod+F12 exec sudo pm-suspend
-
-
 # Changing to hjkl
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -249,7 +245,7 @@ mode "$mode_system" {
 }
 
 bindsym $mod+Pause mode "$mode_system"
-bindsym $mod+$oth  mode "$mode_system"
+bindsym $mod+F12  mode "$mode_system"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
