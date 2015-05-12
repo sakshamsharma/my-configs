@@ -24,4 +24,12 @@ Their numerical values have specific meanings:
 - 5 -- rx
 - 4 -- r
 
+Another way is to use characters. Doing u+rw adds write permissions for user. Similarly for g (group) and o (other).
+Doing a o-rw for example removes read write permissions for others.
+
 Use -R to give the specific permissions to the whole directory.
+
+*umask* decides the default permissions for a file/directory.
+
+To own a file, you need to go sudo and take over the permissions with this format: *chown username:username filename*
+This assigns the file to the user and the group of the user (only one *username* leaves the group root.)
