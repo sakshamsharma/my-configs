@@ -15,6 +15,9 @@ set $tag2 "2: Codes"
 set $tag3 "3: Music"
 set $tag4 "4: Misc"
 
+# Taken from benkaiser/i3-wm-config
+set $control ~/.i3/workspace_controller.py
+
 
 # Default font was this ---- font pango:DejaVu Sans Mono 8
 # New font :)
@@ -83,6 +86,16 @@ bindsym $mod+Shift+l move right
 bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
+# Moving with arrow keys
+bindsym $oth+Left exec $control prev go
+bindsym $oth+Right exec $control next go
+bindsym $oth+Up exec $control up go
+bindsym $oth+Down exec $control down go
+bindsym $oth+Shift+Left exec $control prev move
+bindsym $oth+Shift+Right exec $control next move
+bindsym $oth+Shift+Up exec $control up move
+bindsym $oth+Shift+Down exec $control down move
+
 
 # Window Marks
 bindsym $mod+Shift+m exec i3-input -F 'mark %s' -P 'Mark name: '
@@ -97,9 +110,13 @@ bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink -- +4%
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -- -4%
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
+#
+# Funciton key bindings
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
-
+# Old style bindings
+bindsym $oth+4 exec amixer -q set Master 5%+
+bindsym $oth+3 exec amixer -q set Master 5%-
 
 # Toggling workspaces
 bindsym $oth+z workspace back_and_forth
