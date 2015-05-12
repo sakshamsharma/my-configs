@@ -84,8 +84,8 @@ bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 # Moving with arrow keys
-bindsym $oth+Left exec $control prev go
-bindsym $oth+Right exec $control next go
+bindsym $oth+Up exec $control prev go
+bindsym $oth+Down exec $control next go
 #bindsym $oth+Up exec $control up go
 #bindsym $oth+Down exec $control down go
 bindsym $oth+Shift+Left exec $control prev move
@@ -101,8 +101,8 @@ bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 # brightness control
 bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 6
 bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
-bindsym $oth+Down exec xbacklight -steps 1 -time 0 -dec 6
-bindsym $oth+Up   exec xbacklight -steps 1 -time 0 -inc 10
+#bindsym $oth+Down exec xbacklight -steps 1 -time 0 -dec 6
+#bindsym $oth+Up   exec xbacklight -steps 1 -time 0 -inc 10
 
 
 # Volume 
