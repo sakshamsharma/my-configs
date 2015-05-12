@@ -55,6 +55,7 @@ bindsym $mod+Shift+z [class="Firefox"] focus
 # Terminal
 bindsym Ctrl+$oth+T exec gnome-terminal
 bindsym $mod+Return exec gnome-terminal
+bindsym $oth+Return exec gnome-terminal
 
 # Screenshot
 bindsym Ctrl+$oth+W exec gnome-screenshot
@@ -100,6 +101,9 @@ bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 # brightness control
 bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 6
 bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
+bindsym $oth+Down exec xbacklight -steps 1 -time 0 -dec 6
+bindsym $oth+Up   exec xbacklight -steps 1 -time 0 -inc 10
+
 
 # Volume 
 #set $sink `pactl list short sinks | grep RUNNING | cut -f1`

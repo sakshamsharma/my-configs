@@ -1,7 +1,7 @@
-Some less known shell commands
+Linux tips and tricks
 ------------------------------
 
-I'll be listing a few shell tricks in this file, gathered from experience with shell projects,
+I'll be listing a few Linux tricks in this file, gathered from my own (often destructive) experiences,
 or from the book 'The Linux Bible'
 
 **Some nice commands**\n
@@ -25,11 +25,16 @@ Their numerical values have specific meanings:
 - 4 -- r
 
 Another way is to use characters. Doing u+rw adds write permissions for user. Similarly for g (group) and o (other).
-Doing a o-rw for example removes read write permissions for others.
+Doing a o-rw for example removes read write permissions for others.\n
 
-Use -R to give the specific permissions to the whole directory.
+Use -R to give the specific permissions to the whole directory.\n
 
-*umask* decides the default permissions for a file/directory.
+*umask* decides the default permissions for a file/directory.\n
 
-To own a file, you need to go sudo and take over the permissions with this format: *chown username:username filename*
-This assigns the file to the user and the group of the user (only one *username* leaves the group root.)
+To own a file, you need to go sudo and take over the permissions with this format: *chown username:username filename*\n
+This assigns the file to the user and the group of the user (only one *username* leaves the group root.)\n
+
+
+**TODO**\n
+
+- Add how to make a command run without sudo ( http://askubuntu.com/questions/159007/ )
