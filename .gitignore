@@ -1,3 +1,4 @@
 ~*
 .config/google-chrome/*
 .config/google-chrome-unstable/*
+.config/gconf/apps/guake/*

@@ -38,7 +38,7 @@ exec synclient TapButton2=2
 exec synclient TapButton3=3
 
 # Startup softwares
-exec --no-startup-id guake
+#exec --no-startup-id guake
 exec --no-startup-id nm-applet
 #exec --no-startup-id synapse
 #exec --no-startup-id touchegg
