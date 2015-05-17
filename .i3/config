@@ -64,7 +64,7 @@ bindsym Ctrl+$oth+W exec gnome-screenshot
 bindsym $mod+F2 exec vim
 
 # Nautilus
-bindsym $mod+F3 exec nautilus
+bindsym $mod+F3 exec nemo --no-desktop
 
 # Sublime
 bindsym $mod+F4 exec subl
@@ -100,7 +100,7 @@ bindsym $mod+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
 
 # brightness control
 bindsym XF86MonBrightnessDown exec xbacklight -steps 1 -time 0 -dec 6
-bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 10
+bindsym XF86MonBrightnessUp exec xbacklight -steps 1 -time 0 -inc 8
 #bindsym $oth+Down exec xbacklight -steps 1 -time 0 -dec 6
 #bindsym $oth+Up   exec xbacklight -steps 1 -time 0 -inc 10
 

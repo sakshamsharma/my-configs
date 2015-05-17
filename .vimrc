@@ -83,6 +83,9 @@ Plugin 'autoswap.vim'
 "Plugin '2072/PHP-Indenting-for-VIm'
 Plugin '2072/vim-syntax-for-PHP'
 
+" For haskell
+Plugin 'raichoo/haskell-vim'
+
 
 " Colors
 Plugin 'tomasr/molokai'
@@ -91,8 +94,15 @@ Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 filetype plugin indent on
 
-" For vimacs
-let g:VM_Enabled=1
+" For haskell
+let g:haskell_enable_quantification = 1
+let g:haskell_enable_recursivedo = 1
+let g:haskell_enable_arrowsyntax = 1
+let g:haskell_enable_pattern_synonyms = 1
+let g:haskell_enable_typeroles = 1
+let g:haskell_enable_static_pointers = 1
+
+let g:haskell_indent_if = 3
 
 " For airline
 if has('unix')
