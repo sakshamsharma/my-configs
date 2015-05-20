@@ -4,7 +4,7 @@ out_to_console yes
 
 background no
 max_text_width 0
-update_interval 1.0
+update_interval 4.0
 total_run_times 0
 short_units on
 if_up_strictness address
@@ -20,6 +20,7 @@ TEXT
 	{ "full_text" : "${if_up wlan0} WiFi: Down ${downspeed wlan0} Up ${upspeed wlan0} ${endif}" , "color" : "\#66ff09"},
 	{ "full_text" : " Uptime $uptime_short " , "color" : "\#ffffff"  },
 	{ "full_text" : "${fs_free /home} Free in Home" , "color" : "\#00ff00"  },
+	{ "full_text" : "${fs_free /} Free in Root" , "color" : "\#00ff00"  },
 	{ "full_text" : " RAM ${mem} ${memperc}% " , "color" :
 	    ${if_match ${memperc}<90}"\#66ff99"${else}"\#ff0000"${endif} },
 	{ "full_text" : "CPU ${cpu}% ", "color" :

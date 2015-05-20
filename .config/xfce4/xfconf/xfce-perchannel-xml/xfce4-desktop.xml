@@ -27,4 +27,11 @@
       </property>
     </property>
   </property>
+  <property name="windowlist-menu" type="empty">
+    <property name="show-submenus" type="bool" value="false"/>
+  </property>
+  <property name="last" type="empty">
+    <property name="window-width" type="int" value="898"/>
+    <property name="window-height" type="int" value="553"/>
+  </property>
 </channel>
