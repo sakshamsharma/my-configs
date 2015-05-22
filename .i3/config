@@ -47,7 +47,7 @@ bindsym $mod+F1 exec google-chrome-stable
 
 # Terminal
 bindsym Ctrl+$oth+T exec gnome-terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec urxvt
 bindsym $oth+Return exec gnome-terminal
 
 # Screenshot

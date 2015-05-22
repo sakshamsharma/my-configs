@@ -7,6 +7,7 @@
 export EDITOR=vim
 # GVim Alias
 alias gv='gvim'
+alias nemo='nemo --no-desktop'
 alias upd='sudo apt-get update'
 alias inst='sudo apt-get install'
 alias repo='sudo add-apt-repository'

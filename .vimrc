@@ -90,6 +90,7 @@ Plugin 'raichoo/haskell-vim'
 " Colors
 Plugin 'tomasr/molokai'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -176,13 +177,15 @@ set cindent
 set history=1000
 set undolevels=1000
 set scrolloff=6
+set autoread 	  "Reloads file on change
 
 set guioptions-=m
 set guioptions-=T
 
 cmap w!! w !sudo tee % >/dev/null
 
-colors pablo 
+"colors pablo 
+colors jellybeans
 
 set pastetoggle=<F2>  "Toggles paste mode
 
