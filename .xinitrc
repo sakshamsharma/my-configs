@@ -18,4 +18,5 @@ else
     feh --bg-center ~/Wallpapers/paperart5.jpg
 fi
 
+xrdb -merge /home/saksham/.Xresources
 exec i3
