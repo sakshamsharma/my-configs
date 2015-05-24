@@ -284,11 +284,16 @@ URxvt*jumpScroll: True
 URxvt*background: Black
 URxvt*foreground: White
 
+
+!urxvt*secondaryScreen: false
+
 ! To implement clickable URLs
-URxvt*perl-ext-common: default,matcher
-URxvt*urlLauncher: firefox
-URxvt*matcher.button: 1
-URxvt*colorUL: #86a2be
+URxvt.perl-ext-common: default,matcher,vtwheel
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+
+URxvt.tabbed.autohide: true
 
 ! This changes the default colour definitions for the terminal.
 ! The 1st one in each section is normal Black (example), second is bright
@@ -318,3 +323,5 @@ URxvt*color14 : #34E2E2
 ! white
 URxvt*color7  : #D3D7CF
 URxvt*color15 : #EEEEEC
+
+! Use >> xrdb -merge /home/saksham/.Xresources
