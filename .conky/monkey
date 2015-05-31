@@ -17,6 +17,7 @@ TEXT
 [
 	{ "full_text" : "${if_up enp9s0} LAN: Down ${downspeed enp9s0} Up ${upspeed enp9s0} ${endif}" , "color" : "\#66ff99"},
 	{ "full_text" : "${if_up eth0} LAN: Down ${downspeed eth0} Up ${upspeed eth0} ${endif}" , "color" : "\#66ff99"},
+	{ "full_text" : "${if_up enp0s20u2} Tethering: Down ${downspeed enp0s20u2} Up ${upspeed enp0s20u2} ${endif}" , "color" : "\#66ff99"},
 	{ "full_text" : "${if_up wlp8s0} WiFi: Down ${downspeed wlp8s0} Up ${upspeed wlp8s0} ${endif}" , "color" : "\#66ff09"},
 	{ "full_text" : "${if_up wlan0} WiFi: Down ${downspeed wlan0} Up ${upspeed wlan0} ${endif}" , "color" : "\#66ff09"},
 	{ "full_text" : " Uptime $uptime_short " , "color" : "\#ffffff"  },
