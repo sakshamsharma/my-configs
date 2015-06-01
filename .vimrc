@@ -126,6 +126,9 @@ syntax on
 syntax enable
 set nowrap
 
+set undofile
+set undodir=~/.vim/undodir
+
 " Enable code folding with z,a
 set foldmethod=indent
 set foldlevel=99
