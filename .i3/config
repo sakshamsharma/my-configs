@@ -37,6 +37,7 @@ exec synclient TapButton3=3
 
 # Startup softwares
 exec --no-startup-id nm-applet &
+exec --no-startup-id hipchat &
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes
@@ -92,6 +93,9 @@ bindsym $mod+F9 exec "i3-nagbar -t warning -m 'Edit system files' -b 'config' 'e
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# Hiding borders at the edge of screen
+hide_edge_borders both
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -234,3 +238,5 @@ bar {
             inactive_workspace #b58900 #b58900 #eee8d5
         }
 }
+
+assign [class="HipChat"] 4
