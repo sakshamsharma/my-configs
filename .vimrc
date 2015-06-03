@@ -22,6 +22,15 @@ endif
 " Git plugin
 Plugin 'tpope/vim-fugitive'
 
+" For commenting
+Plugin 'tpope/vim-commentary'
+
+" Detects hard/soft tabbing and tabwidths
+Plugin 'tpope/vim-sleuth'
+
+" Replaces grep
+Plugin 'mileszs/ack.vim'
+
 " NERDCommenter
 Plugin 'scrooloose/nerdcommenter'
 
@@ -113,8 +122,20 @@ if has('unix')
   let g:airline#extensions#tabline#enabled = 1
 endif
 
+" New space mappings
+nnoremap <Space>w :w<CR>
+nnoremap <Space>q :wq<CR>
+vmap <Space>y "+y
+vmap <Space>d "+d
+nmap <Space>p "+p
+nmap <Space>P "+P
+vmap <Space>p "+p
+vmap <Space>P "+P
+
 " NERDcommenter mapping
 nmap // <leader>ci
+
+" EasyMotion
 nmap .. <leader><leader>w
 nmap ,, <leader><leader>b
 
@@ -152,6 +173,9 @@ map <F9> magg2//G//`a:w<return>
 
 " For scala
 map <F3> :!scalac %<return>:redraw!<return>:!scala %:r<return>
+
+" For compiling files in C++
+map <F4> :! make %:r<return>
 
 set backspace=indent,eol,start
 set background=dark

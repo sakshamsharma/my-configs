@@ -5,8 +5,8 @@
 
 # CUSTOM COMMANDS
 export EDITOR=vim
-# GVim Alias
 alias gv='gvim'
+alias ks='ls'
 alias nemo='nemo --no-desktop'
 alias upd='sudo apt-get update'
 alias inst='sudo apt-get install'
@@ -35,8 +35,27 @@ alias damn='$(thefuck $(fc -ln -1))'
 # Adding .myscripts folder to path
 export PATH=$HOME/.myscripts:$PATH
 
+# Adding path for arcanist to allow arc command
+export PATH=/home/saksham/arcanist/bin:$PATH    
+
 # Adding path to zsh-syntax-highlighting script
 source ~/.myscripts/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Close Vim with Ctrl+z and then reopen it with Ctrl+z
+# Credit: sheerun.net
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
