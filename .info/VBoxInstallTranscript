@@ -1,0 +1,31 @@
+: 1433440585:0;sudo modprobe virtualbox-host-modules
+: 1433440603:0;modprobe vboxdrv
+: 1433440605:0;sudo modprobe vboxdrv
+: 1433440616:0;sudo modprobe vboxnetadp
+: 1433440620:0;sudo modprobe vboxnetflt
+: 1433440624:0;sudo modprobe vboxpci
+: 1433440656:0;gpasswd -a saksham vboxusers
+: 1433440659:0;sudo gpasswd -a saksham vboxusers
+: 1433440679:0;pac virtualbox-guest-ido
+: 1433440681:0;pac virtualbox-guest-iso
+: 1433440912:0;pac virtualbox-guest-modules
+: 1433440928:0;pac virtualbox-guest-utils
+: 1433440945:0;pac virtualbox-guest-dkms
+: 1433440972:0;dkms install vboxguest/4.3.28
+: 1433440974:0;sudo dkms install vboxguest/4.3.28
+: 1433441040:0;modprobe -a vboxguest vboxsf vboxvideo
+: 1433441043:0;sudo modprobe -a vboxguest vboxsf vboxvideo
+: 1433441084:0;packer vboxguest-hook
+: 1433441146:0;vim /etc/mkinitcpio.
+: 1433441149:0;vim /etc/mkinitcpio.conf
+: 1433441174:0;sudo modprobe -a vboxguest vboxsf vboxvideo
+: 1433441218:0;sudo vboxreload
+: 1433441220:0;sudo modprobe -a vboxguest vboxsf vboxvideo
+: 1433441260:0;sudo vboxreload
+: 1433441262:0;sudo modprobe -a vboxguest vboxsf vboxvideo
+: 1433441350:0;VBoxClient --clipboard --draganddrop --seamless --display --checkhostversion
+: 1433441366:0;VBoxClient-all
+: 1433441398:0;sudo systemctl start vboxservice
+: 1433441525:0;lsblk
+: 1433441696:0;sudo mount /dev/sr0 ~/mnt/1
+
