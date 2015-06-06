@@ -41,6 +41,17 @@ export PATH=/home/saksham/arcanist/bin:$PATH
 # Adding path to zsh-syntax-highlighting script
 source ~/.myscripts/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# To display items in the folder you currently are browing with Ctrl+K or Return on empty input
+bindkey -s '\C-K' '^qls\n'
+accept-line() {
+  if [[ -z $BUFFER ]]; then
+    zle -I
+    ls
+  else
+    zle ".$WIDGET"
+  fi
+}
+zle -N accept-line
 
 # Close Vim with Ctrl+z and then reopen it with Ctrl+z
 # Credit: sheerun.net
@@ -104,3 +115,9 @@ fi
 
 
 export COOKIE="Cookie: id=saksham0808; timestamp=1430940663; auth=D546C5E71058DF8BDEF97D94CD8831D1E4598109"
+
+bindkey ' ' magic-space
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line

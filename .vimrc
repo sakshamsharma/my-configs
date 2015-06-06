@@ -156,10 +156,10 @@ set foldlevel=99
 
 " Make new windows with <ctrl>+w + v , <ctrl>+w + s and close with <ctrl>+w+q
 " Allow movement between windows with control+movement keys
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
+nmap <c-h> <c-w>h
 map <C><tab> :bnext<return>
 
 " Keyboard shortcuts for PHP + HTML
