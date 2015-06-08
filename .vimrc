@@ -206,6 +206,9 @@ set undolevels=1000
 set scrolloff=6
 set autoread 	  "Reloads file on change
 
+set lazyredraw		" redraw only when we need to
+inoremap \\ <C-o>
+
 set guioptions-=m
 set guioptions-=T
 

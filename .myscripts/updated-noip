@@ -1,0 +1,3 @@
+#! /bin/bash
+
+date > ~/.info/noip-log

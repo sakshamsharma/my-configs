@@ -20,6 +20,12 @@ alias wanping='ping -c 3 www.google.com'
 alias wifi='sudo wifi-menu'
 alias fgrep='grep -r -i'
 
+# Commonly used dirs
+alias core='cd /home/saksham/ixchel/core/src/main/scala/org.gmantra.ixchel/models'
+alias htt='cd /home/saksham/ixchel/http/src/main/scala/org.gmantra.ixchel/api'
+alias mys='cd /home/saksham/.myscripts/'
+alias ixc='cd /home/saksham/ixchel/'
+
 # Mounting aliases
 alias DataDr='sudo mount /dev/sda6 /mnt'
 alias UData='sudo umount /dev/sda6'
