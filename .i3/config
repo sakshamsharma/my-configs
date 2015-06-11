@@ -37,6 +37,7 @@ exec synclient TapButton3=3
 
 # Startup softwares
 exec --no-startup-id nm-applet &
+exec --no-startup-id conky -c ~/.conky/sideconky &
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes

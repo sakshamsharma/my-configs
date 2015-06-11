@@ -1,0 +1,20 @@
+Designed by Greennix.  I hope others enjoy and can use this to make their own creations.
+
+The on off buttons:
+1. bluetooth connection(my PS3 controller)
+2. Wired connection
+3. Wifi Connection
+4. OpenVPN running w/ external IP to verify
+
+The script is ugly, I had issues with the pie_chart.lua loading font and other minor issues, so it may act strange when modified.
+
+Items used/modified:
+
+Wallpaper - http://kde-look.org/content/show.php?content=51146
+Icons - Http://kde-look.org/content/search.php
+      - PS3 Sixaxis http://www.iconarchive.com/show/playstation-3-icons-by-nendomatt/PS3-sixaxis-icon.html 
+      - OPENVPN Icon - http://openvpn.net/index.php/miscellaneous/473-openvpn-logos-and-icons.html
+
+Lua Script for pie chart - http://wlourf.deviantart.com/art/Pie-Chart-Widget-for-Conky-3-166109474
+
+Font - http://www.urbanfonts.com/fonts/monofur.htm
