@@ -26,7 +26,7 @@ font pango: Ubuntu Mono 10
 floating_modifier $mod
 
 # Setting wallpaper :D
-exec --no-startup-id feh --bg-fill ~/Wallpapers/2.jpg
+exec --no-startup-id feh --bg-fill ~/Wallpapers/4.jpg
 
 # Allowing horizontal scrolling and touchpad taps
 exec synclient HorizEdgeScroll=1
