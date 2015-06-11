@@ -3,11 +3,16 @@
 import urllib.request
 from xml.etree import ElementTree as etree
 
+authdata = open('../.info/gmailauth')
+username = authdata.readline().rstrip('\n')
+password = authdata.readline().rstrip('\n')
+authdata.close()
+
 auth_handler = urllib.request.HTTPBasicAuthHandler()
 auth_handler.add_password(realm='mail.google.com',
                           uri='https://mail.google.com/',
-                          user= 'saksham0808',
-                          passwd= 'passwordisnotstoredincleartext')
+                          user= username,
+                          passwd= password)
 opener = urllib.request.build_opener(auth_handler)
 urllib.request.install_opener(opener)
 
