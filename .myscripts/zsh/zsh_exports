@@ -1,0 +1,19 @@
+# Custom exports
+
+# Don't ever forget this !
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+
+# Adding .myscripts folder to path
+export PATH=$HOME/.myscripts:$PATH
+
+# Adding path for arcanist to allow arc command
+export PATH=/home/saksham/arcanist/bin:$PATH    
+
+# Node version manager
+export NVM_DIR="/home/saksham/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export EDITOR=vim
+
+# For ixchel (gmantra)
+export COOKIE="Cookie: id=saksham0808; timestamp=1430940663; auth=D546C5E71058DF8BDEF97D94CD8831D1E4598109"
