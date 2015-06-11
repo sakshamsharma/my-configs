@@ -1,0 +1,9 @@
+#! /bin/bash
+
+a=$(sensors|grep 'Core 0'|awk '{print $3}' | grep -E "^\+[0-9]+" -o | grep -E "[0-9]+" -o)
+b=$(sensors|grep 'Core 1'|awk '{print $3}' | grep -E "^\+[0-9]+" -o | grep -E "[0-9]+" -o)
+c=$(sensors|grep 'Core 2'|awk '{print $3}' | grep -E "^\+[0-9]+" -o | grep -E "[0-9]+" -o)
+d=$(sensors|grep 'Core 3'|awk '{print $3}' | grep -E "^\+[0-9]+" -o | grep -E "[0-9]+" -o)
+
+total=$((($a+$b+$c+$d)/4))
+echo "${total}.0°C"

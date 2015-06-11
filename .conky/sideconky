@@ -1,0 +1,127 @@
+# UBUNTU-CONKY
+# A comprehensive conky script, configured for use on
+# Ubuntu / Debian Gnome, without the need for any external scripts.
+#
+# Based on conky-jc and the default .conkyrc.
+# INCLUDES:
+# - tail of /var/log/messages
+# - netstat connections to your computer
+#
+# -- Pengo (conky@pengo.us)
+#
+
+format_human_readable yes
+top_cpu_separate false
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_type override
+own_window_hints below
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# fiddle with window
+use_spacer right
+use_xft yes
+
+# Update interval in seconds
+update_interval 3.0
+
+#Maximum Width of Window
+maximum_width 850
+
+# Minimum size of text area
+minimum_size 250 5
+
+# Draw shades?
+draw_shades no
+
+# Text stuff
+draw_outline no # amplifies text if yes
+draw_borders no
+xftfont ubuntu:size=11
+uppercase no # set to yes if you want all text to be in uppercase
+
+# Stippled borders?
+stippled_borders 3
+
+# border margins
+border_margin 5
+
+# border width
+border_width 6
+
+# Default colors and also border colors, grey90 == #e5e5e5
+#default_color FFFFCC
+default_color FFFFFF 
+
+own_window_colour blue
+own_window_transparent yes
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+gap_x 50
+gap_y 0
+
+draw_graph_borders yes
+# stuff after ‘TEXT’ will be formatted on screen
+
+TEXT
+
+
+
+
+
+
+
+
+$color
+${color 330099}SYSTEM ${hr 2}$color
+$nodename $sysname $kernel on $machine
+Uptime: $uptime
+
+${color 330099}CPU ${hr 2}$color
+Intel(R) Core(TM) i7-4710U CPU @ 2.50GHz (~3.50Ghz) X 8
+
+Total CPU: ${cpu cpu0}% ${alignr}CPU Temperature: $color ${execi 20 ~/.conky/cputemp}
+${color BBBBBB}${cpubar}$color
+Core 1: ${freq 1} MHz ${goto 160}${color BBBBBB}${cpubar cpu1}$color
+Core 2: ${freq 2} MHz ${goto 160}${color BBBBBB}${cpubar cpu2}$color
+Core 3: ${freq 3} MHz ${goto 160}${color BBBBBB}${cpubar cpu3}$color
+Core 4: ${freq 4} MHz ${goto 160}${color BBBBBB}${cpubar cpu4}$color
+Core 5: ${freq 5} MHz ${goto 160}${color BBBBBB}${cpubar cpu4}$color
+Core 6: ${freq 6} MHz ${goto 160}${color BBBBBB}${cpubar cpu4}$color
+Core 7: ${freq 7} MHz ${goto 160}${color BBBBBB}${cpubar cpu4}$color
+Core 8: ${freq 8} MHz ${goto 160}${color BBBBBB}${cpubar cpu4}$color
+
+NAME${goto 150}PID${goto 250}CPU%${goto 320}MEM%
+${color BBBBBB}${top name 1}${goto 150}${top pid 1}${goto 240}${top cpu 1}${goto 320}${top mem 1}
+${top name 2}${goto 150}${top pid 2}${goto 240}${top cpu 2}${goto 320}${top mem 2}
+${top name 3}${goto 150}${top pid 3}${goto 240}${top cpu 3}${goto 320}${top mem 3}
+${top name 4}${goto 150}${top pid 4}${goto 240}${top cpu 4}${goto 320}${top mem 4}
+${top name 5}${goto 150}${top pid 5}${goto 240}${top cpu 5}${goto 320}${top mem 5}
+${top name 6}${goto 150}${top pid 6}${goto 240}${top cpu 6}${goto 320}${top mem 6}$color
+
+${color 330099}MEMORY ${hr 2}$color
+RAM Used: ${mem}	RAM Free: ${memfree}/ ${memmax}
+RAM: $memperc%  ${color BBBBBB}${membar 6}$color
+Swap: $swapperc%  ${color BBBBBB}${swapbar 6}$color
+
+${color 330099}NETWORK (${addr enp9s0}) ${hr 2}$color
+Down: $color${downspeed enp9s0} k/s ${alignr}Up: ${upspeed eth1} k/s
+${downspeedgraph enp9s0 25,140 000000 BBBBBB} ${alignr}${upspeedgraph enp9s0
+25,140 000000 BBBBBB}$color
+Total: ${totaldown enp9s0} ${alignr}Total: ${totalup enp9s0}
+Inbound: ${tcp_portmon 1 32767 count} Outbound: ${tcp_portmon 32768
+61000 count}${alignr}Total: ${tcp_portmon 1 65535 count}
+
+#${color 000000}EMAIL ${hr 2}$color
+#${color BBBBBB}${execi 300 python2 ~/.conky/gmail-view.py | fold -w50}$color
+
+#${color 000000}LOGGING ${hr 2}$color
+#${color BBBBBB}${execi 30 dmesg | tail -n 3 | fold -w 50}$color
