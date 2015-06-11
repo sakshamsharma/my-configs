@@ -1,0 +1,33 @@
+# Alias for my zsh
+alias gv='gvim'
+alias ks='ls'
+alias nemo='nemo --no-desktop'
+alias upd='sudo apt-get update'
+alias inst='sudo apt-get install'
+alias repo='sudo add-apt-repository'
+alias pac='sudo pacman -S'
+alias rem='sudo pacman -R'
+
+alias proc='ps -e | grep'
+alias lanping='ping -c 3 webmail.iitk.ac.in'
+alias wanping='ping -c 3 www.google.com'
+alias wifi='sudo wifi-menu'
+alias fgrep='grep -r -i'
+
+# Commonly used dirs
+alias core='cd /home/saksham/ixchel/core/src/main/scala/org.gmantra.ixchel/models'
+alias htt='cd /home/saksham/ixchel/http/src/main/scala/org.gmantra.ixchel/api'
+alias mys='cd /home/saksham/.myscripts/'
+alias ixc='cd /home/saksham/ixchel/'
+
+# Mounting aliases
+alias DataDr='sudo mount /dev/sda6 /mnt'
+alias UData='sudo umount /dev/sda6'
+
+# PIP aliases to fix my 'sudo' troubles
+alias pip='sudo pip'
+alias pip2='sudo pip2'
+
+# Shell plugin to correct commands
+alias fuck='$(thefuck $(fc -ln -1))'
+alias damn='$(thefuck $(fc -ln -1))'

@@ -1,0 +1,8 @@
+source ~/.myscripts/zsh/zsh_omz
+source ~/.myscripts/zsh/zsh_alias
+source ~/.myscripts/zsh/zsh_exports
+source ~/.myscripts/zsh/zsh_functions
+source ~/.myscripts/zsh/zsh_bindkey
+
+# Adding path to zsh-syntax-highlighting script
+source ~/.myscripts/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
