@@ -120,8 +120,8 @@ Total: ${totaldown enp9s0} ${alignr}Total: ${totalup enp9s0}
 Inbound: ${tcp_portmon 1 32767 count} Outbound: ${tcp_portmon 32768
 61000 count}${alignr}Total: ${tcp_portmon 1 65535 count}
 
-#${color 000000}EMAIL ${hr 2}$color
-#${color BBBBBB}${execi 300 python2 ~/.conky/gmail-view.py | fold -w50}$color
+${color 330099}EMAIL ${hr 2}$color
+${color BBBBBB}${execi 300 python2 ~/.conky/gmail-notifier.py | fold -w50}$color
 
 #${color 000000}LOGGING ${hr 2}$color
 #${color BBBBBB}${execi 30 dmesg | tail -n 3 | fold -w 50}$color

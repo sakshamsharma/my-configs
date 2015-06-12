@@ -3,7 +3,7 @@
 import urllib.request
 from xml.etree import ElementTree as etree
 
-authdata = open('../.info/gmailauth')
+authdata = open('../.credentials/gmailauth')
 username = authdata.readline().rstrip('\n')
 password = authdata.readline().rstrip('\n')
 authdata.close()
