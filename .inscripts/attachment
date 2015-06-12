@@ -1,0 +1,185 @@
+ saksham   master ✚  http post localhost:7771/haskell source:='{"type":"markdown","content":"New item"}' tags:='[]' keywords:='{}' properties:='{}' mentions:='[]' actions:='[]' attachments:='[]' $COOKIE
+ HTTP/1.1 202 Accepted
+ Content-Length: 0
+ Date: Tue, 09 Jun 2015 19:35:29 GMT
+ Location: http://localhost:7771/haskell/60b302ce-9c9c-45c6-a92a-a617ce6e5c77
+ Server: akka-http/2.3.11
+
+
+
+  saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="upload" key="Tgfns2vsT2DF7AnH" filename="abc.vim" backend="S3" $COOKIE
+  HTTP/1.1 202 Accepted
+  Content-Length: 0
+  Date: Tue, 09 Jun 2015 19:36:03 GMT
+  Location: http://localhost:7771/haskell/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method=upload
+  Server: akka-http/2.3.11
+
+
+
+   saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="upload" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE
+   HTTP/1.1 202 Accepted
+   Content-Length: 0
+   Date: Tue, 09 Jun 2015 19:37:56 GMT
+   Location: http://localhost:7771/haskell/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method=upload
+   Server: akka-http/2.3.11
+
+
+
+    saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="download" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE
+    HTTP/1.1 301 Moved Permanently
+    Content-Length: 0
+    Date: Tue, 09 Jun 2015 19:39:10 GMT
+    Location: http://localhost:7771/SNzpeX3D4LHGGBbl?method=download
+    Server: akka-http/2.3.11
+
+
+
+     saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="download" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE
+     HTTP/1.1 500 Internal Server Error
+     Content-Length: 35
+     Content-Type: text/plain; charset=UTF-8
+     Date: Tue, 09 Jun 2015 19:53:25 GMT
+     Server: akka-http/2.3.11
+
+     There was an internal server error.
+
+      saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+      HTTP/1.1 200 OK
+      Content-Length: 189
+      Content-Type: application/json
+      Date: Tue, 09 Jun 2015 19:53:33 GMT
+      Server: akka-http/2.3.11
+
+{
+	    "key": "2XC0XibfWwTQWKxc",
+	    	    "url": "https://ixchel-uploads.s3.amazonaws.com/2XC0XibfWwTQWKxc?AWSAccessKeyId=AKIAJTICTJFMAZL6X6WA&Expires=1433883213&Signature=T3RpFOVkLLgO6KpYrX8Om3nBd%2Fk%3D"
+
+}
+
+ saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="download" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE
+ HTTP/1.1 500 Internal Server Error
+ Content-Length: 35
+ Content-Type: text/plain; charset=UTF-8
+ Date: Tue, 09 Jun 2015 19:53:34 GMT
+ Server: akka-http/2.3.11
+
+ There was an internal server error.
+
+  saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="upload" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE  
+   ✘  saksham   master ✚  
+    ✘  saksham   master ✚  
+     ✘  saksham   master ✚  
+      ✘  saksham   master ✚  http post localhost:7771/haskell source:='{"type":"markdown","content":"Another one"}' tags:='[]' keywords:='{}' properties:='{}' mentions:='[]' actions:='[]' attachments:='[]' $COOKIE
+      HTTP/1.1 202 Accepted
+      Content-Length: 0
+      Date: Tue, 09 Jun 2015 19:55:23 GMT
+      Location: http://localhost:7771/haskell/5fbad0d3-e8d1-4170-a4f3-a69a053c6406
+      Server: akka-http/2.3.11
+
+
+
+       saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="upload" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE
+        ✘  saksham   master ✚  http post localhost:7771/haskell/items/60b302ce-9c9c-45c6-a92a-a617ce6e5c77?method="upload" key="SNzpeX3D4LHGGBbl" filename="def.vim" backend="S3" $COOKIE
+         ✘  saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="upload" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+         HTTP/1.1 202 Accepted
+         Content-Length: 0
+         Date: Tue, 09 Jun 2015 19:57:11 GMT
+         Location: http://localhost:7771/haskell/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method=upload
+         Server: akka-http/2.3.11
+
+
+
+          saksham   master ✚  
+           ✘  saksham   master ✚  
+            ✘  saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="upload" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+             ✘  saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="download" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+             HTTP/1.1 500 Internal Server Error
+             Content-Length: 35
+             Content-Type: text/plain; charset=UTF-8
+             Date: Tue, 09 Jun 2015 19:57:32 GMT
+             Server: akka-http/2.3.11
+
+             There was an internal server error.
+
+              saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+
+              http: error: ConnectionError: ('Connection aborted.', ConnectionRefusedError(111, 'Connection refused'))
+               ✘  saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+
+               http: error: ConnectionError: ('Connection aborted.', ConnectionRefusedError(111, 'Connection refused'))
+                ✘  saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+
+                http: error: ConnectionError: ('Connection aborted.', ConnectionRefusedError(111, 'Connection refused'))
+                 ✘  saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+                 HTTP/1.1 200 OK
+                 Content-Length: 187
+                 Content-Type: application/json
+                 Date: Tue, 09 Jun 2015 19:59:24 GMT
+                 Server: akka-http/2.3.11
+
+{
+	    "key": "NN0S5d2mi2P2k66L",
+	    	    "url": "https://ixchel-uploads.s3.amazonaws.com/NN0S5d2mi2P2k66L?AWSAccessKeyId=AKIAJTICTJFMAZL6X6WA&Expires=1433883564&Signature=WMjcr8r76oqhIXszam88Jmj7Ic4%3D"
+
+}
+
+ saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="download" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+ HTTP/1.1 301 Moved Permanently
+ Content-Length: 0
+ Date: Tue, 09 Jun 2015 19:59:29 GMT
+ Location: http://localhost:7771/xi3uI8dM2qacC6Lq?method=download
+ Server: akka-http/2.3.11
+
+
+
+  saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+
+  http: error: ConnectionError: ('Connection aborted.', ConnectionRefusedError(111, 'Connection refused'))
+   ✘  saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+   HTTP/1.1 200 OK
+   Content-Length: 189
+   Content-Type: application/json
+   Date: Tue, 09 Jun 2015 20:02:05 GMT
+   Server: akka-http/2.3.11
+
+{
+	    "key": "9PToNTGKJQcJHKfQ",
+	    	    "url": "https://ixchel-uploads.s3.amazonaws.com/9PToNTGKJQcJHKfQ?AWSAccessKeyId=AKIAJTICTJFMAZL6X6WA&Expires=1433883725&Signature=CZcM2MGgC8EZxmagu8ulG0%2BSk1c%3D"
+
+}
+
+ saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="download" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+ HTTP/1.1 500 Internal Server Error
+ Content-Length: 35
+ Content-Type: text/plain; charset=UTF-8
+ Date: Tue, 09 Jun 2015 20:02:07 GMT
+ Server: akka-http/2.3.11
+
+ There was an internal server error.
+
+  saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="download" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+  ^C
+   ✘  saksham   master ✚  http 'localhost:7771/_?method=requestS3' $COOKIE
+   HTTP/1.1 200 OK
+   Content-Length: 189
+   Content-Type: application/json
+   Date: Tue, 09 Jun 2015 20:06:46 GMT
+   Server: akka-http/2.3.11
+
+{
+	    "key": "BjQTv1JwoGTB4FUr",
+	    	    "url": "https://ixchel-uploads.s3.amazonaws.com/BjQTv1JwoGTB4FUr?AWSAccessKeyId=AKIAJTICTJFMAZL6X6WA&Expires=1433884006&Signature=Y3Qk%2BnBe006AWH77sZ1fIR3yiM0%3D"
+
+}
+
+ saksham   master ✚  http post localhost:7771/haskell/items/5fbad0d3-e8d1-4170-a4f3-a69a053c6406?method="download" key="xi3uI8dM2qacC6Lq" filename="ghi.vim" backend="S3" $COOKIE
+ HTTP/1.1 301 Moved Permanently
+ Content-Length: 0
+ Date: Tue, 09 Jun 2015 20:06:48 GMT
+ Location: https://ixchel-uploads.s3.amazonaws.com/xi3uI8dM2qacC6Lq?response-content-disposition=attachment%3B+filename*%3DUTF-8''ghi.vim&AWSAccessKeyId=AKIAJTICTJFMAZL6X6WA&Expires=1433884008&Signature=erLGtgmcJCWGa2mNOFA9Rd7Mhg8%3D
+ Server: akka-http/2.3.11
+
+
+
+  saksham   master ✚  
+
