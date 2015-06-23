@@ -6,6 +6,10 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/u
 # Adding .myscripts folder to path
 export PATH=$HOME/.myscripts:$PATH
 
+# Adding path to dart-sdk
+export PATH=$HOME/dart-sdk/bin:$PATH
+export PATH=$HOME/dartium:$PATH
+
 # Adding path for arcanist to allow arc command
 export PATH=/home/saksham/arcanist/bin:$PATH    
 
@@ -15,3 +19,4 @@ export NVM_DIR="/home/saksham/.nvm"
 
 export EDITOR=vim
 
+export MYZSH=/home/saksham/.myscripts/zsh

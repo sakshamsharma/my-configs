@@ -95,6 +95,11 @@ Plugin '2072/vim-syntax-for-PHP'
 " For haskell
 Plugin 'raichoo/haskell-vim'
 
+" Go Development plugin
+Plugin 'fatih/vim-go'
+
+" Dart plugin
+Plugin 'dart-lang/dart-vim-plugin'
 
 " Colors
 Plugin 'tomasr/molokai'
@@ -179,9 +184,9 @@ map <F4> :! make %:r<return>
 
 set backspace=indent,eol,start
 set background=dark
-set shiftwidth=4
+set shiftwidth=2
 set shiftround
-set tabstop=4
+set tabstop=2
 set smarttab
 set wildmenu
 

@@ -13,12 +13,14 @@ alias lanping='ping -c 3 webmail.iitk.ac.in'
 alias wanping='ping -c 3 www.google.com'
 alias wifi='sudo wifi-menu'
 alias fgrep='grep -r -i'
+alias pjson='node -e "console.log(JSON.stringify(JSON.parse(require('fs').readFileSync(process.argv[1])), null, 4));" ' # Prettify input JSON file
 
 # Commonly used dirs
 alias core='cd /home/saksham/ixchel/core/src/main/scala/org.gmantra.ixchel/models'
 alias htt='cd /home/saksham/ixchel/http/src/main/scala/org.gmantra.ixchel/api'
 alias mys='cd /home/saksham/.myscripts/'
 alias ixc='cd /home/saksham/ixchel/'
+alias si='cd /home/saksham/ixchel-si/'
 
 # Mounting aliases
 alias DataDr='sudo mount /dev/sda6 /mnt'
