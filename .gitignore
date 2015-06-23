@@ -4,3 +4,4 @@
 .config/gconf/apps/guake/*
 .config/dconf/
 .info/gmailauth
+.info/noip-log

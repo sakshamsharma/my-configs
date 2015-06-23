@@ -179,9 +179,9 @@ map <F4> :! make %:r<return>
 
 set backspace=indent,eol,start
 set background=dark
-set shiftwidth=4
+set shiftwidth=2
 set shiftround
-set tabstop=4
+set tabstop=2
 set smarttab
 set wildmenu
 
