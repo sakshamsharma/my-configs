@@ -6,6 +6,10 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/u
 # Adding .myscripts folder to path
 export PATH=$HOME/.myscripts:$PATH
 
+# Adding path to dart-sdk
+export PATH=$HOME/dart-sdk/bin:$PATH
+export PATH=$HOME/dartium:$PATH
+
 # Adding path for arcanist to allow arc command
 export PATH=/home/saksham/arcanist/bin:$PATH    
 
@@ -14,6 +18,8 @@ export NVM_DIR="/home/saksham/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export EDITOR=vim
+
+export MYZSH=/home/saksham/.myscripts/zsh
 
 # For ixchel (gmantra)
 export COOKIE="Cookie: id=saksham0808; timestamp=1430940663; auth=D546C5E71058DF8BDEF97D94CD8831D1E4598109"

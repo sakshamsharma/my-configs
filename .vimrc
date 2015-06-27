@@ -95,6 +95,11 @@ Plugin '2072/vim-syntax-for-PHP'
 " For haskell
 Plugin 'raichoo/haskell-vim'
 
+" Go Development plugin
+Plugin 'fatih/vim-go'
+
+" Dart plugin
+Plugin 'dart-lang/dart-vim-plugin'
 
 " Colors
 Plugin 'tomasr/molokai'

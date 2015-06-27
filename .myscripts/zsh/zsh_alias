@@ -20,6 +20,7 @@ alias core='cd /home/saksham/ixchel/core/src/main/scala/org.gmantra.ixchel/model
 alias htt='cd /home/saksham/ixchel/http/src/main/scala/org.gmantra.ixchel/api'
 alias mys='cd /home/saksham/.myscripts/'
 alias ixc='cd /home/saksham/ixchel/'
+alias si='cd /home/saksham/ixchel-si/'
 
 # Mounting aliases
 alias DataDr='sudo mount /dev/sda6 /mnt'
