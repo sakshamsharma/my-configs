@@ -289,18 +289,21 @@ URxvt*foreground: White
 
 ! To implement clickable URLs
 URxvt.perl-ext-common: default,matcher,vtwheel,clipboard
-URxvt.url-launcher: /usr/bin/firefox
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
-
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 
 ! disable the stupid ctrl+shift 'feature'
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+
 URxvt.tabbed.autohide: true
+
+URxvt.keysym.Mod4-c: perl:clipboard:copy
+URxvt.keysym.Mod4-v: perl:clipboard:paste
 
 ! This changes the default colour definitions for the terminal.
 ! The 1st one in each section is normal Black (example), second is bright
