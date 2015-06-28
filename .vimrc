@@ -101,6 +101,9 @@ Plugin 'fatih/vim-go'
 " Dart plugin
 Plugin 'dart-lang/dart-vim-plugin'
 
+" Jade plugin
+Plugin 'digitaltoad/vim-jade'
+
 " Colors
 Plugin 'tomasr/molokai'
 Plugin 'derekwyatt/vim-scala'
