@@ -3,5 +3,7 @@
 .config/google-chrome-unstable/*
 .config/gconf/apps/guake/*
 .config/dconf/
+.config/gtk-2.0/gtkfilechooser.ini
+.config/gtk-3.0/bookmarks
 .info/gmailauth
 .info/noip-log
