@@ -88,6 +88,9 @@ Plugin 'marcweber/vim-addon-mw-utils'
 " Vim auto stop with swap messages
 Plugin 'autoswap.vim'
 
+" Camel Case words would be counted as separate words
+Plugin 'vim-scripts/camelcasemotion'
+
 " Official PHP plugin for vim
 "Plugin '2072/PHP-Indenting-for-VIm'
 Plugin '2072/vim-syntax-for-PHP'
@@ -104,6 +107,9 @@ Plugin 'dart-lang/dart-vim-plugin'
 " Jade plugin
 Plugin 'digitaltoad/vim-jade'
 
+" LaTeX Plugin
+Plugin 'lervag/vimtex'
+
 " Colors
 Plugin 'tomasr/molokai'
 Plugin 'derekwyatt/vim-scala'
@@ -111,6 +117,18 @@ Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
+
+" For LaTeX-Suite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
+" For camelcasemotion
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
 
 " For haskell
 let g:haskell_enable_quantification = 1
@@ -150,6 +168,19 @@ nmap ,, <leader><leader>b
 " NERDTree
 nmap <c-n> :NERDTreeToggle<return>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif	"To autoclose if only nerd left
+
+" clear the search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
+
+" Allows going down in the wrapped portion of a line
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
+
+" reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 syntax on
 syntax enable
