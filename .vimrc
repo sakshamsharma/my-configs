@@ -1,176 +1,69 @@
-set nocompatible
-filetype off
+" Plugins
+" =====================================
+" =====================================
 
-"Runtime path for Vundle
-if has('win32') || ('win64')
-  set rtp+=~/vimfiles/bundle/Vundle.vim/
-  let path='~/vimfiles/bundle'
-else
-  set rtp+=~/.vim/bundle/Vundle.vim
-endif
+call plug#begin()
 
-call vundle#begin()
+" Functionality
+Plug 'vim-scripts/AutoComplPop'
+Plug 'scrooloose/nerdtree'
+Plug 'edsono/vim-matchit'
+Plug 'ervandew/supertab'
+Plug 'sjl/gundo.vim'
+Plug 'vim-scripts/auto-pairs-gentle'
+Plug 'vim-scripts/camelcasemotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+Plug 'mileszs/ack.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'autoswap.vim'
 
-" This is the vundle package itself
-Plugin 'gmarik/vundle'
+" Shortcuts
+Plug 'scrooloose/nerdcommenter'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'vim-scripts/closetag.vim'
 
-" Airline plugin
-if has('unix')
-  Plugin 'bling/vim-airline'
-endif
+" Appearance
+Plug 'bling/vim-airline'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'myusuf3/numbers.vim'
 
-" Git plugin
-Plugin 'tpope/vim-fugitive'
+" Colorschemes
+Plug 'tomasr/molokai'
+Plug 'nanotech/jellybeans.vim'
+Plug 'Pychimp/vim-luna'
 
-" For commenting
-Plugin 'tpope/vim-commentary'
+" Language-specific
+Plug 'derekwyatt/vim-scala'
+Plug '2072/vim-syntax-for-PHP'
+Plug 'raichoo/haskell-vim'
+Plug 'fatih/vim-go'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'digitaltoad/vim-jade'
+Plug 'lervag/vimtex'
 
-" Detects hard/soft tabbing and tabwidths
-Plugin 'tpope/vim-sleuth'
+call plug#end()
 
-" Replaces grep
-Plugin 'mileszs/ack.vim'
 
-" NERDCommenter
-Plugin 'scrooloose/nerdcommenter'
+" Custom Mappings
+" =====================================
+" =====================================
 
-" NERDTree
-Plugin 'scrooloose/nerdtree'
-
-" Easy Motion
-Plugin 'Lokaltog/vim-easymotion'
-
-" Vim-gutter
-Plugin 'airblade/vim-gitgutter'
-
-" Luna colorscheme
-Plugin 'Pychimp/vim-luna'
-
-" AutoComplPop
-Plugin 'vim-scripts/AutoComplPop'
-
-" Surround
-Plugin 'tpope/vim-surround'
-
-" Supertab
-Plugin 'ervandew/supertab'
-
-" Enhanced CPP Highlights
-Plugin 'octol/vim-cpp-enhanced-highlight'
-
-" Relative numbering only in normal mode
-Plugin 'myusuf3/numbers.vim'
-
-" Graphical undo
-Plugin 'sjl/gundo.vim'
-
-" Gentle auto-pairing
-Plugin 'vim-scripts/auto-pairs-gentle'
-
-" New autoclose plugin for vim
-"Plugin 'Townk/vim-autoclose'
-
-" Close tag for html. Use with Control + _
-Plugin 'vim-scripts/closetag.vim'
-
-" To move to closing tag of even html files with %
-Plugin 'edsono/vim-matchit'
-
-" Vim addons
-Plugin 'marcweber/vim-addon-mw-utils'
-
-" Snipmate
-"Plugin 'garbas/vim-snipmate'
-
-" Needed for snipmate
-"Plugin 'tomtom/tlib_vim'
-
-" Vim auto stop with swap messages
-Plugin 'autoswap.vim'
-
-" Camel Case words would be counted as separate words
-Plugin 'vim-scripts/camelcasemotion'
-
-" Official PHP plugin for vim
-"Plugin '2072/PHP-Indenting-for-VIm'
-Plugin '2072/vim-syntax-for-PHP'
-
-" For haskell
-Plugin 'raichoo/haskell-vim'
-
-" Go Development plugin
-Plugin 'fatih/vim-go'
-
-" Dart plugin
-Plugin 'dart-lang/dart-vim-plugin'
-
-" Jade plugin
-Plugin 'digitaltoad/vim-jade'
-
-" LaTeX Plugin
-Plugin 'lervag/vimtex'
-
-" Colors
-Plugin 'tomasr/molokai'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'nanotech/jellybeans.vim'
-
-call vundle#end()
-filetype plugin indent on
-
-" For LaTeX-Suite
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
-
-" For camelcasemotion
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
-
-" For haskell
-let g:haskell_enable_quantification = 1
-let g:haskell_enable_recursivedo = 1
-let g:haskell_enable_arrowsyntax = 1
-let g:haskell_enable_pattern_synonyms = 1
-let g:haskell_enable_typeroles = 1
-let g:haskell_enable_static_pointers = 1
-
-let g:haskell_indent_if = 3
-
-" For airline
-if has('unix')
-  set guifont=Liberation\ Mono\ for\ Powerline\ 10
-  set laststatus=2
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-endif
+cmap w!! w !sudo tee % >/dev/null
 
 " New space mappings
 nnoremap <Space>w :w<CR>
 nnoremap <Space>q :wq<CR>
 vmap <Space>y "+y
 vmap <Space>d "+d
+nmap <Space>y "+y
+nmap <Space>d "+d
 nmap <Space>p "+p
 nmap <Space>P "+P
 vmap <Space>p "+p
 vmap <Space>P "+P
-
-" NERDcommenter mapping
-nmap // <leader>ci
-
-" EasyMotion
-nmap .. <leader><leader>w
-nmap ,, <leader><leader>b
-
-" NERDTree
-nmap <c-n> :NERDTreeToggle<return>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif	"To autoclose if only nerd left
-
-" clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
 
 " Allows going down in the wrapped portion of a line
 nnoremap k gk
@@ -182,39 +75,27 @@ nnoremap gj j
 vnoremap < <gv
 vnoremap > >gv
 
+" Make new windows with <ctrl>+w + v , <ctrl>+w + s and close with <ctrl>+w+q
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
+nmap <c-h> <c-w>h
+
+
+" Custom Settings
+" =====================================
+" =====================================
+
 syntax on
 syntax enable
 set nowrap
 
 set undofile
 set undodir=~/.vim/undodir
+set undolevels=1000
 
-" Enable code folding with z,a
-set foldmethod=indent
+set foldmethod=indent 	" Enable code folding with z,a
 set foldlevel=99
-
-" Make new windows with <ctrl>+w + v , <ctrl>+w + s and close with <ctrl>+w+q
-" Allow movement between windows with control+movement keys
-nmap <c-j> <c-w>j
-nmap <c-k> <c-w>k
-nmap <c-l> <c-w>l
-nmap <c-h> <c-w>h
-map <C><tab> :bnext<return>
-
-" Keyboard shortcuts for PHP + HTML
-" This one checks for errors with <F5>
-map <F5> :!php -l %<return>
-map <F7> :set ft=html<return>
-map <F8> :set ft=phtml<return>
-
-" To toggle the PHP tags in a markdown file meant for parsedown
-map <F9> magg2//G//`a:w<return>
-
-" For scala
-map <F3> :!scalac %<return>:redraw!<return>:!scala %:r<return>
-
-" For compiling files in C++
-map <F4> :! make %:r<return>
 
 set backspace=indent,eol,start
 set background=dark
@@ -241,52 +122,89 @@ set smartindent
 set cindent
 
 set history=1000
-set undolevels=1000
 set scrolloff=6
 set autoread 	  "Reloads file on change
-
 set lazyredraw		" redraw only when we need to
-inoremap \\ <C-o>
 
 set guioptions-=m
 set guioptions-=T
-
-cmap w!! w !sudo tee % >/dev/null
-
-"colors pablo 
-colors jellybeans
 
 set pastetoggle=<F2>  "Toggles paste mode
 
 :autocmd Filetype make set noexpandtab
 
-if has("autocmd")
-	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-		\| exe "normal! g'\"" |endif
-endif
+" To restore cursor position
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
 
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+
+" Appearance
+" =====================================
+" =====================================
+
+colors jellybeans
 set t_Co=256
 set gfn=monofur\ for\ Powerline\ Regular\ 13
 
-set dictionary+=~/.vim/bundle/bootstrap-snippets/dictionary
-set complete+=k
+
+" Plugin mappings
+" =====================================
+" =====================================
+
+" For NERDcommenter
+inoremap \\ <C-o>
+
+" For LaTeX-Suite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
+" For camelcasemotion
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
+" For haskell
+let g:haskell_enable_quantification = 1
+let g:haskell_enable_recursivedo = 1
+let g:haskell_enable_arrowsyntax = 1
+let g:haskell_enable_pattern_synonyms = 1
+let g:haskell_enable_typeroles = 1
+let g:haskell_enable_static_pointers = 1
+let g:haskell_indent_if = 3
+
+" NERDcommenter mapping
+nmap // <leader>ci
+
+" EasyMotion
+nmap .. <leader><leader>w
+nmap ,, <leader><leader>b
+
+" NERDTree
+nmap <c-n> :NERDTreeToggle<return>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif	"To autoclose if only nerd left
+
+" For airline
+if has('unix')
+  set guifont=Liberation\ Mono\ for\ Powerline\ 10
+  set laststatus=2
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+endif
 
 if has('unix')
-	if !exists('g:airline_symbols')
-		let g:airline_symbols = {}
-	endif
-	"if (!'gui')
-		"let g:airline_left_sep = '»'
-		"let g:airline_left_sep = '▶'
-		"let g:airline_right_sep = '«'
-		"let g:airline_right_sep = '◀'
-		"let g:airline_symbols.linenr = '␊'
-		"let g:airline_symbols.linenr = '␤'
-		"let g:airline_symbols.linenr = '¶'
-		"let g:airline_symbols.branch = '⎇'
-		"let g:airline_symbols.paste = 'ρ'
-		"let g:airline_symbols.paste = 'Þ'
-		"let g:airline_symbols.paste = '∥'
-		"let g:airline_symbols.whitespace = 'Ξ'
-	"endif
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
 endif
