@@ -51,6 +51,7 @@ call plug#end()
 " =====================================
 " =====================================
 
+" Save with root priviledges
 cmap w!! w !sudo tee % >/dev/null
 
 " New space mappings
@@ -80,6 +81,9 @@ nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 nmap <c-h> <c-w>h
+
+" Allows you to do a single normal mode action and come back to insert mode
+inoremap \\ <C-o>
 
 
 " Custom Settings
@@ -153,15 +157,12 @@ augroup END
 
 colors jellybeans
 set t_Co=256
-set gfn=monofur\ for\ Powerline\ Regular\ 13
+set gfn=monofur\ for\ Powerline\ Regular\ 14
 
 
 " Plugin mappings
 " =====================================
 " =====================================
-
-" For NERDcommenter
-inoremap \\ <C-o>
 
 " For LaTeX-Suite
 set grepprg=grep\ -nH\ $*
@@ -197,7 +198,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " For airline
 if has('unix')
-  set guifont=Liberation\ Mono\ for\ Powerline\ 10
+  set guifont=Liberation\ Mono\ for\ Powerline\ 14
   set laststatus=2
   let g:airline_powerline_fonts = 1
   let g:airline#extensions#tabline#enabled = 1
