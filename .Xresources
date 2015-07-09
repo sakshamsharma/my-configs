@@ -272,7 +272,7 @@
 
 URxvt*cursorBlink: True
 URxvt*saveLines: 12000
-URxvt.font: xft:monofur for Powerline:size=13
+URxvt.font: xft:monofur for Powerline:size=14
 
 ! Scrollbar options
 URxvt*scrollstyle: plain
@@ -281,7 +281,7 @@ URxvt*scrollBar_floating: True
 URxvt*jumpScroll: True
 
 ! URxvt colours
-URxvt*background: Black
+URxvt*background: #002932
 URxvt*foreground: White
 
 
