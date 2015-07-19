@@ -230,8 +230,8 @@ bindsym $mod+F12  mode "$mode_system"
 # finds out, if available)
 
 bar {
-		#status_command i3status
-		status_command ~/.conky/initscript
+	#status_command i3status
+	status_command ~/.conky/initscript
         colors {
             # solarized
             background #073642
