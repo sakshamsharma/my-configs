@@ -1,0 +1,24 @@
+curl -XPOST 'localhost:9200/iitk_alumini/person/_search?search_type=count&pretty' -d '
+{ 
+	"size": 0, 
+	"aggs": 
+	{ 
+		"skills" : 
+		{ 
+			"terms" : 
+			{ 
+				"field" : "skills.raw", "size": 0, "include": "Solar Energy"
+			},
+			"aggs" :
+			{
+				"skills" :
+				{
+					"terms" :
+					{
+						"field": "skills.raw", "include": "Science"
+					}
+				}
+			}
+		} 
+	} 
+}'
