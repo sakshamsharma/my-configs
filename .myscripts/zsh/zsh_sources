@@ -6,3 +6,7 @@ source ~/.myscripts/zsh/zsh_bindkey
 
 # Adding path to zsh-syntax-highlighting script
 source ~/.myscripts/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#fortune | cowsay
+fortune -c | cowthink -f $(find /usr/share/cows -type f | shuf -n 1)
+
