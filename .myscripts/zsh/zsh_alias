@@ -33,3 +33,14 @@ alias pip2='sudo pip2'
 # Shell plugin to correct commands
 alias fuck='$(thefuck $(fc -ln -1))'
 alias damn='$(thefuck $(fc -ln -1))'
+
+# Git aliases
+alias g='git'
+alias gl='git log'
+alias gp='git pull'
+alias gs='git push'
+
+# systemctl
+alias ssst='sudo systemctl start'
+alias sstp='sudo systemctl stop'
+alias ssrs='sudo systemctl restart'

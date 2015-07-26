@@ -13,6 +13,10 @@ export PATH=$HOME/dartium:$PATH
 # Adding path for arcanist to allow arc command
 export PATH=/home/saksham/arcanist/bin:$PATH    
 
+export PATH=/home/saksham/.pub-cache/bin:$PATH
+
+export PATH=/home/saksham/.gem/ruby/2.2.0/bin:$PATH
+
 # Node version manager
 export NVM_DIR="/home/saksham/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
