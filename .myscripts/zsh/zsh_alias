@@ -37,10 +37,13 @@ alias damn='$(thefuck $(fc -ln -1))'
 # Git aliases
 alias g='git'
 alias gl='git log'
-alias gp='git pull'
-alias gs='git push'
+alias gs='git status'
+alias gpl='git pull'
+alias gps='git push'
+alias push='git push'
+alias fpush='git push -f'
 
 # systemctl
-alias ssst='sudo systemctl start'
-alias sstp='sudo systemctl stop'
-alias ssrs='sudo systemctl restart'
+alias sst='sudo systemctl start'
+alias ssp='sudo systemctl stop'
+alias ssr='sudo systemctl restart'

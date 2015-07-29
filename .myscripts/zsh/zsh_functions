@@ -72,3 +72,7 @@ fi
 # PageUp and PageDown would only show history items starting as typed
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
+
+
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
