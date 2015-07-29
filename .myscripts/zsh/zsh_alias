@@ -39,8 +39,10 @@ alias g='git'
 alias gl='git log'
 alias gp='git pull'
 alias gs='git push'
+alias push='git push'
+alias fpush='git push -f'
 
 # systemctl
-alias ssst='sudo systemctl start'
-alias sstp='sudo systemctl stop'
-alias ssrs='sudo systemctl restart'
+alias sst='sudo systemctl start'
+alias ssp='sudo systemctl stop'
+alias ssr='sudo systemctl restart'
