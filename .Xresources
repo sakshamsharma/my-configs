@@ -288,8 +288,14 @@ URxvt*foreground: White
 !urxvt*secondaryScreen: false
 
 ! To implement clickable URLs
-URxvt.perl-ext-common: default,matcher,vtwheel,clipboard
+URxvt.perl-ext-common:      default,matcher,vtwheel,clipboard,url-select,keyboard-select
 URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.url-select.launcher:  /usr/bin/google-chrome-stable
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
 

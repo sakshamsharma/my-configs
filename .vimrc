@@ -54,13 +54,16 @@ call plug#end()
 " Save with root priviledges
 cmap w!! w !sudo tee % >/dev/null
 
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " New space mappings
 nnoremap <Space>w :w<CR>
 nnoremap <Space>q :wq<CR>
-vmap <Space>y "+y
-vmap <Space>d "+d
-nmap <Space>y "+y
-nmap <Space>d "+d
+vmap <Space>y "+yy
+vmap <Space>d "+dd
+nmap <Space>y "+yy
+nmap <Space>d "+dd
 nmap <Space>p "+p
 nmap <Space>P "+P
 vmap <Space>p "+p
