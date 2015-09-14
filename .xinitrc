@@ -19,4 +19,4 @@ else
 fi
 
 xrdb -merge /home/saksham/.Xresources
-exec i3
+exec xmonad

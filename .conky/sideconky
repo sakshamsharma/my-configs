@@ -66,7 +66,7 @@ alignment top_right
 
 # Gap between borders of screen and text
 gap_x 50
-gap_y 0
+gap_y 40
 
 draw_graph_borders yes
 # stuff after ‘TEXT’ will be formatted on screen
@@ -112,7 +112,7 @@ RAM Used: ${mem}	RAM Free: ${memfree}/ ${memmax}
 RAM: $memperc%  ${color BBBBBB}${membar 6}$color
 Swap: $swapperc%  ${color BBBBBB}${swapbar 6}$color
 
-${color 330099}NETWORK (${addr enp9s0}) ${hr 2}$color
+${color 330099}NETWORK (${addr enp9s0}) (${addr wlp8s0}) ${hr 2}$color
 Down: $color${downspeed enp9s0} k/s ${alignr}Up: ${upspeed eth1} k/s
 ${downspeedgraph enp9s0 25,140 000000 BBBBBB} ${alignr}${upspeedgraph enp9s0
 25,140 000000 BBBBBB}$color
