@@ -18,6 +18,8 @@ export PATH=/home/saksham/.pub-cache/bin:$PATH
 
 export PATH=/home/saksham/.gem/ruby/2.2.0/bin:$PATH
 
+export PATH=/home/saksham/.cabal/bin:$PATH
+
 export PATH=/home/saksham/kubernetes/cluster/ubuntu/binaries:$PATH
 
 # Node version manager
@@ -29,3 +31,5 @@ export EDITOR=vim
 export MYZSH=/home/saksham/.myscripts/zsh
 
 export LFS=/home/saksham/mnt/LFS/
+
+export GOPATH=/home/saksham/gocode
