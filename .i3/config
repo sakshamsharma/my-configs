@@ -26,7 +26,7 @@ font pango: Ubuntu Mono 10
 floating_modifier $mod
 
 # Setting wallpaper :D
-exec --no-startup-id feh --bg-fill ~/Wallpapers/arch1.jpg
+exec --no-startup-id feh --bg-fill ~/Wallpapers/4.jpg
 
 # Allowing horizontal scrolling and touchpad taps
 exec synclient HorizEdgeScroll=1
@@ -38,7 +38,8 @@ exec synclient TapButton3=3
 # Startup softwares
 exec --no-startup-id nm-applet &
 exec --no-startup-id conky -c ~/.conky/sideconky &
-exec noip2
+exec --no-startup-id pasystray &
+exec watch -n 60 /home/saksham/.myscripts/batteryNotifier.sh &
 
 # Allows pressing the shortcut for the present workspace to go back to the previous
 workspace_auto_back_and_forth yes
@@ -56,7 +57,7 @@ bindsym $oth+Return exec gnome-terminal
 bindsym Ctrl+$oth+W exec gnome-screenshot
 
 # Nautilus
-bindsym $mod+F3 exec nautilus
+bindsym $mod+F3 exec pcmanfm
 
 # Sublime (For lending my laptop to others)
 bindsym $mod+F4 exec subl
