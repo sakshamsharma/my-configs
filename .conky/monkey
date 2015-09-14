@@ -27,7 +27,7 @@ TEXT
 	{ "full_text" : "CPU ${cpu}% ", "color" :
     	${if_match ${cpu}<80}"\#66ff99"${else}"\#ff0000"${endif} },
 	{ "full_text" : "${execpi 300 ~/.conky/gmail.py}" , "color" : "\#ff9900"  },
-	{ "full_text" : " Volume: ${exec amixer get Master | grep "Mono:" | awk '{print $4}'  } " , "color" : "\#ffffff"},
+	{ "full_text" : " Volume: ${exec amixer get Master | grep "Front Left" | grep '[0-9]*\%' -o } " , "color" : "\#ffffff"},
 	{ "full_text" : " Battery ${battery BAT1} (${battery_time BAT1})", "color": "\#ffffff"},
 	{ "full_text" : " ${user_names} " , "color" : "\#ffffff" },
 	{ "full_text" : " $time " , "color" : "\#fff00"  }
