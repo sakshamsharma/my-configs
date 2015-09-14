@@ -14,11 +14,12 @@ Plug 'vim-scripts/auto-pairs-gentle'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sleuth'
+"Plug 'tpope/vim-sleuth'
 Plug 'mileszs/ack.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'autoswap.vim'
+Plug 'KabbAmine/zeavim.vim'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
@@ -86,8 +87,17 @@ nmap <c-l> <c-w>l
 nmap <c-h> <c-w>h
 
 " Allows you to do a single normal mode action and come back to insert mode
-inoremap \\ <C-o>
+"inoremap \\ <C-o>
 
+" Compile LaTeX and view in zathura
+"nmap <F5> :w !pdflatex %<return> :!zathura %:r.pdf&<return><return>
+nmap <F5> :w !pdflatex %<return>
+
+nmap <Space> i_<Esc>r
+
+" Specially for PHP and HTML dev
+map <F7> :set ft=html<return>
+map <F8> :set ft=phtml<return>
 
 " Custom Settings
 " =====================================
@@ -102,7 +112,7 @@ set undofile
 set undodir=~/.vim/undodir
 set undolevels=1000
 
-set foldmethod=indent 	" Enable code folding with z,a
+set foldmethod=indent   " Enable code folding with z,a
 set foldlevel=99
 
 set backspace=indent,eol,start
@@ -111,6 +121,7 @@ set shiftwidth=2
 set shiftround
 set tabstop=2
 set smarttab
+set expandtab
 set wildmenu
 
 set showmatch
@@ -121,7 +132,7 @@ set sidescroll=1
 
 set ignorecase
 set smartcase     "CSen only when capitals used.
-set incsearch	  "Starts showing results as you type
+set incsearch   "Starts showing results as you type
 set hlsearch
 
 set autoindent
@@ -131,8 +142,8 @@ set cindent
 
 set history=1000
 set scrolloff=6
-set autoread 	  "Reloads file on change
-set lazyredraw		" redraw only when we need to
+set autoread    "Reloads file on change
+set lazyredraw    " redraw only when we need to
 
 set guioptions-=m
 set guioptions-=T
@@ -198,7 +209,7 @@ nmap ,, <leader><leader>b
 
 " NERDTree
 nmap <c-n> :NERDTreeToggle<return>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif	"To autoclose if only nerd left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif  "To autoclose if only nerd left
 
 " For airline
 if has('unix')
@@ -213,3 +224,12 @@ if has('unix')
     let g:airline_symbols = {}
   endif
 endif
+
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()

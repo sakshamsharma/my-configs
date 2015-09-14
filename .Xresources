@@ -341,3 +341,5 @@ URxvt*color7  : #D3D7CF
 URxvt*color15 : #EEEEEC
 
 ! Use >> xrdb -merge /home/saksham/.Xresources
+
+xscreensaver.newLoginCommand: dm-tool switch-to-greeter
