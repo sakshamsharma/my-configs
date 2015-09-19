@@ -4,7 +4,7 @@ import System.Taffybar.Systray
 import System.Taffybar.TaffyPager
 import System.Taffybar.SimpleClock
 import System.Taffybar.FreedesktopNotifications
-import System.Taffybar.Battery
+{-import System.Taffybar.Battery-}
 import System.Taffybar.Weather
 import System.Taffybar.MPRIS
 import System.Taffybar.NetMonitor
@@ -14,6 +14,8 @@ import System.Taffybar.Widgets.PollingGraph
 
 import System.Information.Memory
 import System.Information.CPU
+
+import MyBattery
 
 -- Used for myPagerConfig
 import Graphics.UI.Gtk (escapeMarkup)
@@ -96,9 +98,10 @@ main = do
       mpris = mprisNew defaultMPRISConfig
       mem = pollingGraphNew memCfg 1 memCallback
       cpu = pollingGraphNew cpuCfg 0.5 cpuCallback
-      net = netMonitorNewWith 10 "wlp8s0" 1 myNetFormat
+      wnet = netMonitorNewWith 10 "wlp8s0" 1 myNetFormat
+      enet = netMonitorNewWith 10 "enp9s0" 1 myNetFormat
       batt  = batteryBarNew defaultBatteryConfig 30
       tray = systrayNew
   defaultTaffybar defaultTaffybarConfig { startWidgets = [ pager, note ]
-                                        , endWidgets = [ tray, wea, clock, mem, cpu, batt, net, mpris ]
+                                        , endWidgets = [ tray, wea, clock, mem, cpu, batt, enet, wnet, mpris ]
                                         }
