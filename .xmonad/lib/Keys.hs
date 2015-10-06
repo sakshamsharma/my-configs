@@ -35,7 +35,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm,               xK_d     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"") -- launch dmenu
   , ((modm .|. shiftMask, xK_d     ), spawn "gmrun")                                          -- launch gmrun (better dmenu)
   , ((modm,               xK_Return), spawn $ XMonad.terminal conf)                           -- launch terminal
-  , ((modm,               xK_F1    ), spawn "google-chrome-stable")                           -- launch chrome
+  , ((modm,               xK_F1    ), spawn "google-chrome-unstable")                         -- launch chrome
   , ((modm,               xK_F3    ), spawn "pcmanfm")                                        -- launch file manager
   , ((modm              , xK_F11   ), prompt ("urxvt" ++ " -e") greenXPConfig)                -- run any command (gmrun with completion)
 

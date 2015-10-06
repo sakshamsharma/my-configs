@@ -9,9 +9,12 @@ myStartup :: X ()
 myStartup = do
   ewmhDesktopsStartup
   setDefaultCursor xC_left_ptr
-  spawnOnce "taffybar"
-  spawnOnce "nm-applet"
-  spawnOnce "pasystray"
-  spawnOnce "xscreensaver -no-splash"
+  spawnOnce "~/.cache/taffybar/taffybar-linux-x86_64 &"
+  spawnOnce "nm-applet &"
+  spawnOnce "pasystray &"
+  spawnOnce "xscreensaver -no-splash &"
   spawnOnce "conky -c ~/.conky/sideconky &"
+  spawnOnce "watch -n 120 ~/.myscripts/batteryNotifier.sh &"
+  spawn "feh --bg-fill ~/Wallpapers/4.jpg &"
+  spawn "xgamma -quiet -rgamma 0.90 -ggamma 0.90 -bgamma 0.90"
   spawn "xrdb -merge ~/.Xresources"
