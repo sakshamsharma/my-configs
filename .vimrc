@@ -39,11 +39,12 @@ Plug 'Pychimp/vim-luna'
 " Language-specific
 Plug 'derekwyatt/vim-scala'
 Plug '2072/vim-syntax-for-PHP'
-Plug 'raichoo/haskell-vim'
+"Plug 'raichoo/haskell-vim'
+Plug 'travitch/hasksyn'
 Plug 'fatih/vim-go'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'digitaltoad/vim-jade'
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -96,8 +97,13 @@ nmap <F5> :w !pdflatex %<return>
 nmap <Space> i_<Esc>r
 
 " Specially for PHP and HTML dev
-map <F7> :set ft=html<return>
-map <F8> :set ft=phtml<return>
+"map <F7> :set ft=html<return>
+"map <F8> :set ft=phtml<return>
+
+map <F8> :w !subl3 %<return> :wq<return>
+map <F9> :w !g++ %<return>
+map <F10> :w !./a.out < input<return>
+map <F11> :w !g++ -std=c++11 %<return>
 
 " Custom Settings
 " =====================================
@@ -121,7 +127,7 @@ set shiftwidth=2
 set shiftround
 set tabstop=2
 set smarttab
-set expandtab
+set expandtab  " Insert space instead of tab, insert tab with Ctrl-V<Tab>
 set wildmenu
 
 set showmatch
@@ -141,7 +147,7 @@ set smartindent
 set cindent
 
 set history=1000
-set scrolloff=6
+set scrolloff=4
 set autoread    "Reloads file on change
 set lazyredraw    " redraw only when we need to
 
@@ -192,13 +198,13 @@ sunmap b
 sunmap e
 
 " For haskell
-let g:haskell_enable_quantification = 1
-let g:haskell_enable_recursivedo = 1
-let g:haskell_enable_arrowsyntax = 1
-let g:haskell_enable_pattern_synonyms = 1
-let g:haskell_enable_typeroles = 1
-let g:haskell_enable_static_pointers = 1
-let g:haskell_indent_if = 3
+"let g:haskell_enable_quantification = 1
+"let g:haskell_enable_recursivedo = 1
+"let g:haskell_enable_arrowsyntax = 1
+"let g:haskell_enable_pattern_synonyms = 1
+"let g:haskell_enable_typeroles = 1
+"let g:haskell_enable_static_pointers = 1
+"let g:haskell_indent_if = 3
 
 " NERDcommenter mapping
 nmap // <leader>ci
@@ -233,3 +239,39 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+set wrap
+let &t_SI = "\<Esc>[6 q""]"
+let &t_SR = "\<Esc>[4 q""]"
+let &t_EI = "\<Esc>[2 q""]"
+
+
+" The following content taken from Harsh Sharma's vimrc
+
+" To toggle line numbering
+noremap <F4> :set invnu invrnu<CR>
+
+" Switch between different tab widths
+nnoremap <Leader>2 :set sw=2 <Bar> set sts=2<CR>
+nnoremap <Leader>4 :set sw=4 <Bar> set sts=4<CR>
+
+
+" capitalize the word preceding the cursor in insert mode
+imap <C-C> <Esc>gUiw`]a
+
+
+" map : to ; and vice-versa
+" so you don't have to hold down shift to get into command mode
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+" repeat last defined macro, Bonus: no Ex mode
+nnoremap Q @@
+
+
+" indent guides
+nnoremap <Leader>i :IndentGuidesToggle<CR>
+
+set title
