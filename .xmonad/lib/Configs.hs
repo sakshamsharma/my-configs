@@ -30,11 +30,12 @@ commandPrompt c p m = inputPromptWithCompl c p (mkComplFunFromList (M.keys m)) ?
 
 commands :: M.Map String (X ())
 commands = M.fromList
-  [ ("logout"         , io $ exitWith ExitSuccess)
+  [ ("logout"       , io $ exitWith ExitSuccess)
   , ("lock"         , spawn $ "xscreensaver-command -lock")
-  , ("suspend"      , spawn $ "xscreensaver-command -lock && sleep 2 && systemctl suspend -i")
-  , ("shutdown"     , spawn $ "sleep 2 && systemctl poweroff")
-  , ("restart"      , spawn $ "sleep 2 && systemctl reboot")
+  , ("suspend"      , spawn $ "xscreensaver-command -lock && sleep 2 && sudo systemctl suspend -i")
+  , ("sleep"        , spawn $ "xscreensaver-command -lock && sleep 2 && sudo pm-suspend")
+  , ("shutdown"     , spawn $ "sleep 2 && sudo systemctl poweroff")
+  , ("restart"      , spawn $ "sleep 2 && sudo systemctl reboot")
   ]
 
 -- shellprompt config
@@ -70,7 +71,7 @@ myLayout = tiled ||| stiled ||| Mirror tiled ||| Full
 
   nmaster1 = 1  -- The default number of windows in the master pane
   nmaster2 = 2  -- Same
-  ratio = 4/7   -- Default proportion of screen occupied by master pane
+  ratio = 1/2   -- Default proportion of screen occupied by master pane
   delta = 5/100 -- Percent of screen to increment by when resizing panes
 
 
