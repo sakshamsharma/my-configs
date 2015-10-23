@@ -16,7 +16,7 @@
 ! Use the specified colour for the colour value n, where 0-7
 ! URxvt*colorn: colour
 
-! 
+!
 ! URxvt*colorBD: colour
 
 ! Use the specified colour to display bold or italic characters when
@@ -72,7 +72,7 @@
 
 ! URxvt*boldFont: fontlist
 
-! 
+!
 ! URxvt*italicFont: fontlist
 
 ! The font list to use for displaying bold, italic or bold italic
@@ -192,7 +192,7 @@
 ! The characters used as delimiters for double-click word selection
 ! URxvt*cutchars: string
 
-! 
+!
 ! URxvt*{|}
 
 ! OverTheSpot, OffTheSpot, Root; option -pt.
@@ -268,6 +268,39 @@
 
 ! Turn on/off ISO 14755 5.2 mode (default enabled).
 ! URxvt*iso14755_52: boolean
+!
+! -----------------------------
+! MY SOLARIZED THEME FOR URXVT
+! -----------------------------
+! URxvt colours
+!URxvt*background: #002932
+!URxvt*foreground: White
+
+!! black
+!URxvt*color0  : #2E3436
+!URxvt*color8  : #555753
+!! red
+!URxvt*color1  : #CC0000
+!URxvt*color9  : #EF2929
+!! green
+!URxvt*color2  : #4E9A06
+!URxvt*color10 : #8AE234
+!! yellow
+!URxvt*color3  : #C4A000
+!URxvt*color11 : #FCE94F
+!! blue
+!URxvt*color4  : #3465A4
+!URxvt*color12 : #729FCF
+!! magenta
+!URxvt*color5  : #75507B
+!URxvt*color13 : #AD7FA8
+!! cyan
+!URxvt*color6  : #06989A
+!URxvt*color14 : #34E2E2
+!! white
+!URxvt*color7  : #D3D7CF
+!URxvt*color15 : #EEEEEC
+
 
 
 URxvt*cursorBlink: True
@@ -280,17 +313,12 @@ URxvt*scrollBar_right: True
 URxvt*scrollBar_floating: True
 URxvt*jumpScroll: True
 
-! URxvt colours
-URxvt*background: #002932
-URxvt*foreground: White
-
-
 !urxvt*secondaryScreen: false
 
 ! To implement clickable URLs
-URxvt.perl-ext-common:      default,matcher,vtwheel,clipboard,url-select,keyboard-select
-URxvt.url-launcher: /usr/bin/google-chrome-stable
-URxvt.url-select.launcher:  /usr/bin/google-chrome-stable
+URxvt.perl-ext-common:      default,matcher,clipboard,url-select,keyboard-select
+URxvt.url-launcher:         /usr/bin/google-chrome-unstable
+URxvt.url-select.launcher:  /usr/bin/google-chrome-unstable
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
 URxvt.keysym.M-Escape:      perl:keyboard-select:activate
@@ -311,35 +339,39 @@ URxvt.tabbed.autohide: true
 URxvt.keysym.Mod4-c: perl:clipboard:copy
 URxvt.keysym.Mod4-v: perl:clipboard:paste
 
+xscreensaver.newLoginCommand: dm-tool switch-to-greeter
+
+!-*-{ Xft settings
+Xft*dpi:       96
+Xft*antialias: True
+Xft*hinting:   Full
+!-*-}
+
+! Background colors
+urxvt*foreground: white
+urxvt*background: black
+
 ! This changes the default colour definitions for the terminal.
 ! The 1st one in each section is normal Black (example), second is bright
-! These colours are the ones used in GNOME terminal
-!
-! black
-URxvt*color0  : #2E3436
-URxvt*color8  : #555753
-! red
-URxvt*color1  : #CC0000
-URxvt*color9  : #EF2929
-! green
-URxvt*color2  : #4E9A06
-URxvt*color10 : #8AE234
-! yellow
-URxvt*color3  : #C4A000
-URxvt*color11 : #FCE94F
-! blue
-URxvt*color4  : #3465A4
-URxvt*color12 : #729FCF
-! magenta
-URxvt*color5  : #75507B
-URxvt*color13 : #AD7FA8
-! cyan
-URxvt*color6  : #06989A
-URxvt*color14 : #34E2E2
-! white
-URxvt*color7  : #D3D7CF
-URxvt*color15 : #EEEEEC
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+! Transparency settings
+urxvt*transparent: true
+urxvt*shading: 15
 
 ! Use >> xrdb -merge /home/saksham/.Xresources
-
-xscreensaver.newLoginCommand: dm-tool switch-to-greeter
