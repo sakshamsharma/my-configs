@@ -8,4 +8,4 @@ source ~/.myscripts/zsh/zsh_bindkey
 source ~/.myscripts/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #fortune | cowsay
-fortune -a | cowthink -f $(find /usr/share/cows -type f | shuf -n 1)
+#fortune -a | cowthink -f $(find /usr/share/cows -type f | shuf -n 1)

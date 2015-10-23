@@ -4,7 +4,7 @@ import System.Taffybar.Systray
 import System.Taffybar.TaffyPager
 import System.Taffybar.SimpleClock
 import System.Taffybar.FreedesktopNotifications
-{-import System.Taffybar.Battery-}
+import System.Taffybar.Battery
 import System.Taffybar.Weather
 import System.Taffybar.MPRIS
 import System.Taffybar.NetMonitor
@@ -15,7 +15,7 @@ import System.Taffybar.Widgets.PollingGraph
 import System.Information.Memory
 import System.Information.CPU
 
-import MyBattery
+{-import MyBattery-}
 
 -- Used for myPagerConfig
 import Graphics.UI.Gtk (escapeMarkup)
