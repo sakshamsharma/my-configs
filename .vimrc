@@ -92,7 +92,7 @@ nmap <c-h> <c-w>h
 
 " Compile LaTeX and view in zathura
 "nmap <F5> :w !pdflatex %<return> :!zathura %:r.pdf&<return><return>
-nmap <F5> :w !pdflatex %<return>
+nmap <F5> ;w !pdflatex %<return>
 
 nmap <Space> i_<Esc>r
 

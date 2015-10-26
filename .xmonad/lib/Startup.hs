@@ -18,3 +18,4 @@ myStartup = do
   spawn "feh --bg-fill ~/Wallpapers/4.jpg &"
   spawn "xgamma -quiet -rgamma 0.90 -ggamma 0.90 -bgamma 0.90"
   spawn "xrdb -merge ~/.Xresources"
+  spawn "pcmanfm --desktop"
