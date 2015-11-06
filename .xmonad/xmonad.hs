@@ -9,10 +9,10 @@ import Keys
 import Configs
 import Startup
 
-main = do
+main =
   xmonad $ ewmh $ pagerHints $ defaultConfig {
     manageHook = manageDocks <+> manageHook defaultConfig <+> composeAll myManagementHooks
-  , layoutHook = avoidStruts $ smartBorders $ myLayout
+  , layoutHook = avoidStruts $ smartBorders myLayout
   , keys               = myKeys
   , workspaces         = myWorkspaces
   , startupHook        = myStartup

@@ -20,7 +20,7 @@ import qualified Data.Map        as M
 scratchpads =
   [
     NS "htop" "urxvt -e htop" (title =? "htop") (customFloating $ W.RationalRect 0 0 1 (5/12))  -- <F4>
-  , NS "gvim" "gvim" (className =? "Gvim") (customFloating $ W.RationalRect (0) (0) (0) (0))    -- <F5>
+  , NS "gvim" "gvim" (className =? "Gvim") (customFloating $ W.RationalRect 0 0 0 0)    -- <F5>
   ]
 
 
@@ -30,11 +30,11 @@ commandPrompt c p m = inputPromptWithCompl c p (mkComplFunFromList (M.keys m)) ?
 
 commands :: M.Map String (X ())
 commands = M.fromList
-  [ ("logout"         , io $ exitWith ExitSuccess)
-  , ("lock"         , spawn $ "xscreensaver-command -lock")
-  , ("suspend"      , spawn $ "xscreensaver-command -lock && sleep 2 && systemctl suspend -i")
-  , ("shutdown"     , spawn $ "sleep 2 && systemctl poweroff")
-  , ("restart"      , spawn $ "sleep 2 && systemctl reboot")
+  [ ("logout"       , io    exitSuccess)
+  , ("lock"         , spawn "xscreensaver-command -lock")
+  , ("suspend"      , spawn "xscreensaver-command -lock && sleep 2 && systemctl suspend -i")
+  , ("shutdown"     , spawn "sleep 2 && systemctl poweroff")
+  , ("restart"      , spawn "sleep 2 && systemctl reboot")
   ]
 
 -- shellprompt config
@@ -70,7 +70,7 @@ myLayout = tiled ||| stiled ||| Mirror tiled ||| Full
 
   nmaster1 = 1  -- The default number of windows in the master pane
   nmaster2 = 2  -- Same
-  ratio = 4/7   -- Default proportion of screen occupied by master pane
+  ratio = 1/2   -- Default proportion of screen occupied by master pane
   delta = 5/100 -- Percent of screen to increment by when resizing panes
 
 
