@@ -15,3 +15,4 @@ myStartup = do
   spawnOnce "xscreensaver -no-splash"
   spawnOnce "conky -c ~/.conky/sideconky &"
   spawn "xrdb -merge ~/.Xresources"
+  spawn "feh --bf-fill ~/Wallpapers/batmanarch.png"
