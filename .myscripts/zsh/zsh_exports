@@ -30,9 +30,6 @@ export EDITOR=vim
 
 export MYZSH=/home/saksham/.myscripts/zsh
 
-# For ixchel (gmantra)
-export COOKIE="Cookie: id=saksham0808; timestamp=1430940663; auth=D546C5E71058DF8BDEF97D94CD8831D1E4598109"
-
 export LFS=/home/saksham/mnt/LFS/
 
 export GOPATH=/home/saksham/gocode

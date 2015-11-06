@@ -32,7 +32,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm,               xK_F5    ), namedScratchpadAction scratchpads "gvim")
 
 -- | App launchers
-  , ((modm,               xK_d     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"") -- launch dmenu
+  , ((modm,               xK_d     ), spawn "dmenu_run")                                      -- launch dmenu
   , ((modm .|. shiftMask, xK_d     ), spawn "gmrun")                                          -- launch gmrun (better dmenu)
   , ((modm,               xK_Return), spawn $ XMonad.terminal conf)                           -- launch terminal
   , ((modm,               xK_F1    ), spawn "google-chrome-unstable")                         -- launch chrome

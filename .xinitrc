@@ -15,8 +15,9 @@ if [ `xrandr | grep -c ' connected '` -eq 2 ]; then # dual-monitor
 #    xsetroot -solid \#cccccc
 else
     xrandr --output LVDS-1 --auto --primary --output VGA-1 --off --output DVI-1 --off
-    feh --bg-center ~/Wallpapers/paperart5.jpg
 fi
 
 xrdb -merge /home/saksham/.Xresources
+eval `dbus-launch --auto-syntax`
+/home/saksham/.myscripts/touchpad.sh
 exec xmonad

@@ -10,6 +10,7 @@ import System.Exit
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Actions.Submap
+import XMonad.Hooks.ManageHelpers
 
 import XMonad.Prompt
 import XMonad.Prompt.Input
@@ -35,6 +36,7 @@ commands = M.fromList
   , ("suspend"      , spawn "xscreensaver-command -lock && sleep 2 && systemctl suspend -i")
   , ("shutdown"     , spawn "sleep 2 && systemctl poweroff")
   , ("restart"      , spawn "sleep 2 && systemctl reboot")
+  , ("sleep"        , spawn $ "xscreensaver-command -lock && sleep 2 && sudo pm-suspend")
   ]
 
 -- shellprompt config
@@ -59,7 +61,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
   {-spawn "conky -c ~/.conky/sideconky &"-}
 
 myManagementHooks :: [ManageHook]
-myManagementHooks = [ ]
+myManagementHooks = [ composeOne [ isFullscreen -?> doFullFloat  ] ]
 
 myLayout = tiled ||| stiled ||| Mirror tiled ||| Full
  where
