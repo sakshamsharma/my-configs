@@ -27,19 +27,7 @@ escape :: String -> String
 escape = escapeMarkup
 
 emptyS :: String -> String
-emptyS s
-   | True = ""
-
--- | Creates markup with the given foreground and background colors and the
--- given contents.
-colorize :: String -- ^ Foreground color.
-         -> String -- ^ Background color.
-         -> String -- ^ Contents.
-         -> String
-colorize fg bg = printf "<span%s%s>%s</span>" (attr "fg" fg) (attr "bg" bg)
-  where attr name value
-          | null value = ""
-          | otherwise  = printf " %scolor=\"%s\"" name value
+emptyS s = ""
 
 -- | Limit a string to a certain length, adding "..." if truncated.
 shorten :: Int -> String -> String
@@ -47,13 +35,6 @@ shorten l s
   | length s <= l = s
   | l >= 3        = take (l - 3) s ++ "..."
   | otherwise     = "..."
-
--- | Wrap the given string in the given delimiters.
-wrap :: String -- ^ Left delimiter.
-     -> String -- ^ Right delimiter.
-     -> String -- ^ Output string.
-     -> String
-wrap open close s = open ++ s ++ close
 
 memCallback = do
   mi <- parseMeminfo
@@ -64,15 +45,9 @@ cpuCallback = do
   return [totalLoad, systemLoad]
 
 myPagerConfig :: PagerConfig
-myPagerConfig = PagerConfig
+myPagerConfig = defaultPagerConfig
   { activeWindow     = escape . shorten 50
-  , activeLayout     = wrap " " " " . escape
-  , activeWorkspace  = colorize "yellow" "" . wrap "[" "]" . escape
-  , hiddenWorkspace  = escape
   , emptyWorkspace   = emptyS
-  , visibleWorkspace = wrap "(" ")" . escape
-  , urgentWorkspace  = colorize "red" "yellow" . escape
-  , widgetSep        = "  :  "
   }
 
 myNetFormat :: String
@@ -97,10 +72,10 @@ main = do
       mem = pollingGraphNew memCfg 1 memCallback
       cpu = pollingGraphNew cpuCfg 0.5 cpuCallback
       wnet = netMonitorNewWith 10 "wlp8s0" 1 myNetFormat
-      enet = netMonitorNewWith 10 "eno1" 1 myNetFormat
       enet = netMonitorNewWith 10 "enp9s0" 1 myNetFormat
+      enet2 = netMonitorNewWith 10 "eno1" 1 myNetFormat
       batt  = batteryBarNew defaultBatteryConfig 30
       tray = systrayNew
   defaultTaffybar defaultTaffybarConfig { startWidgets = [ pager, note ]
-                                        , endWidgets = [ tray, wea, clock, mem, cpu, batt, enet, wnet, mpris ]
+                                        , endWidgets = [ tray, wea, clock, mem, cpu, batt, enet2, enet, wnet, mpris ]
                                         }
