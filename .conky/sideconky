@@ -86,8 +86,8 @@ $nodename $sysname $kernel on $machine
 Uptime: $uptime
 
 ${color 330099}CPU ${hr 2}$color
-Intel(R) Core(TM) i7-4710U CPU @ 2.50GHz (~3.50Ghz) X 8
-
+#Intel(R) Core(TM) i7-4710U CPU @ 2.50GHz (~3.50Ghz) X 8
+${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
 Total CPU: ${cpu cpu0}% ${alignr}CPU Temperature: $color ${execi 20 ~/.conky/cputemp}
 ${color BBBBBB}${cpubar}$color
 Core 1: ${freq 1} MHz ${goto 160}${color BBBBBB}${cpubar cpu1}$color

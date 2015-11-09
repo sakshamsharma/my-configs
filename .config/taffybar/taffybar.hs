@@ -26,9 +26,6 @@ import Text.Printf (printf)
 escape :: String -> String
 escape = escapeMarkup
 
-emptyS :: String -> String
-emptyS s = ""
-
 -- | Limit a string to a certain length, adding "..." if truncated.
 shorten :: Int -> String -> String
 shorten l s
@@ -47,7 +44,7 @@ cpuCallback = do
 myPagerConfig :: PagerConfig
 myPagerConfig = defaultPagerConfig
   { activeWindow     = escape . shorten 50
-  , emptyWorkspace   = emptyS
+  , emptyWorkspace   = const ""
   }
 
 myNetFormat :: String

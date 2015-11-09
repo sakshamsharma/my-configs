@@ -16,6 +16,6 @@ myStartup = do
   spawnOnce "conky -c ~/.conky/sideconky &"
   spawnOnce "watch -n 120 ~/.myscripts/batteryNotifier.sh &"
   spawn "feh --bg-fill ~/Wallpapers/4.jpg &"
-  spawn "feh --bf-fill ~/Wallpapers/batmanarch.png"
+  spawn "feh --bf-fill ~/Wallpapers/asscreed.jpg"
   spawn "xrdb -merge ~/.Xresources"
   spawn "pcmanfm --desktop"

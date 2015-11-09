@@ -1,8 +1,8 @@
 source ~/.myscripts/zsh/zsh_sources
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${ROOTPATH}:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:${ROOTPATH}:$PATH"
 
 # Load zsh-autosuggestions.
-source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
+#source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
 
 # Enable autosuggestions automatically.
 #zle-line-init() {
