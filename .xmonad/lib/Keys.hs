@@ -28,8 +28,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
   [
 -- | Scratchpads
-    ((modm,               xK_F4    ), namedScratchpadAction scratchpads "htop")
-  , ((modm,               xK_F5    ), namedScratchpadAction scratchpads "gvim")
+    ((modm,               xK_F4    ), namedScratchpadAction scratchpads "urxvt --hold -e htop")
+  , ((modm,               xK_F5    ), namedScratchpadAction scratchpads "urxvt --hold -e alsamixer")
+  , ((modm,               xK_F6    ), namedScratchpadAction scratchpads "gvim")
 
 -- | App launchers
   , ((modm,               xK_d     ), spawn "dmenu_run")                                      -- launch dmenu
