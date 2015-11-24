@@ -33,10 +33,10 @@ commands :: M.Map String (X ())
 commands = M.fromList
   [ ("logout"       , io    exitSuccess)
   , ("lock"         , spawn "xscreensaver-command -lock")
-  , ("suspend"      , spawn "xscreensaver-command -lock && sleep 2 && systemctl suspend -i")
+  , ("suspend"      , spawn "xscreensaver-command -lock && sleep 2 && sudo systemctl suspend -i")
   , ("shutdown"     , spawn "sleep 2 && systemctl poweroff")
   , ("restart"      , spawn "sleep 2 && systemctl reboot")
-  , ("sleep"        , spawn $ "xscreensaver-command -lock && sleep 2 && sudo pm-suspend")
+  , ("sleep"        , spawn "xscreensaver-command -lock && sleep 1 && sudo pm-suspend")
   ]
 
 -- shellprompt config
@@ -56,12 +56,8 @@ fireSPConfig = defaultXPConfig
 
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
-{-myStartup :: X ()-}
-{-myStartup = do-}
-  {-spawn "conky -c ~/.conky/sideconky &"-}
-
 myManagementHooks :: [ManageHook]
-myManagementHooks = [ composeOne [ isFullscreen -?> doFullFloat  ] ]
+myManagementHooks = [ composeOne [ isFullscreen -?> doFullFloat  ], resource =? "synapse" --> doIgnore ]
 
 myLayout = tiled ||| stiled ||| Mirror tiled ||| Full
  where
