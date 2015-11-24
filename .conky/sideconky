@@ -110,7 +110,7 @@ ${top name 6}${goto 150}${top pid 6}${goto 240}${top cpu 6}${goto 320}${top mem 
 ${color 330099}MEMORY ${hr 2}$color
 RAM Used: ${mem}	RAM Free: ${memfree}/ ${memmax}
 RAM: $memperc%  ${color BBBBBB}${membar 6}$color
-Swap: $swapperc%  ${color BBBBBB}${swapbar 6}$color
+#Swap: $swapperc%  ${color BBBBBB}${swapbar 6}$color
 
 ${color 330099}NETWORK (${addr enp9s0}) (${addr wlp8s0}) ${hr 2}$color
 Down: $color${downspeed enp9s0} k/s ${alignr}Up: ${upspeed eth1} k/s
@@ -122,8 +122,8 @@ Total: ${totaldown eno1} ${alignr}Total: ${totalup eno1}
 Inbound: ${tcp_portmon 1 32767 count} Outbound: ${tcp_portmon 32768
 61000 count}${alignr}Total: ${tcp_portmon 1 65535 count}
 
-${color 330099}EMAIL ${hr 2}$color
-${color BBBBBB}${execi 300 python2 ~/.conky/gmail-notifier.py | fold -w50}$color
+#${color 330099}EMAIL ${hr 2}$color
+#${color BBBBBB}${execi 300 python2 ~/.conky/gmail-notifier.py | fold -w50}$color
 
 #${color 000000}LOGGING ${hr 2}$color
 #${color BBBBBB}${execi 30 dmesg | tail -n 3 | fold -w 50}$color

@@ -17,7 +17,18 @@ else
     xrandr --output LVDS-1 --auto --primary --output VGA-1 --off --output DVI-1 --off
 fi
 
+# For NVIDIA driver (proprietary)
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+
 xrdb -merge /home/saksham/.Xresources
+
+# To start dbus before other things
 eval `dbus-launch --auto-syntax`
+
+# configure synclient touchpad
 /home/saksham/.myscripts/touchpad.sh
+
+# Make caps a new control
+setxkbmap -option ctrl:nocaps
 exec xmonad
