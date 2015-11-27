@@ -20,14 +20,14 @@
     powerline
     haskell-mode
     auto-complete
+    markdown-mode
     multi-term
+    helm
     ) "a list of packages to ensure are installed at launch.")
 
 
 ; my-packages.el
 (require 'cl)
-(require 'powerline)
-(require 'yasnippet)
 
 ; method to check if all packages are installed
 (defun packages-installed-p ()
