@@ -22,7 +22,9 @@
     auto-complete
     markdown-mode
     multi-term
+    dart-mode
     helm
+    js2-mode
     ) "a list of packages to ensure are installed at launch.")
 
 

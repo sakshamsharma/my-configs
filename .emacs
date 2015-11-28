@@ -1,4 +1,9 @@
-;; Initialize package.el
+;;; .emacs --- Main config file for my emacs
+;;; Commentary:
+;;; This loads 2 files in ~/.emacs.d folder which handle my packages related configurations.
+;;; This itself contains base emacs specific configurations.
+
+;;; Code:
 (require 'package)
 (package-initialize)
 
@@ -58,6 +63,7 @@
 (global-set-key (kbd "M-]") 'doc-next)
 
 ;; Continous scrolling in doc view
+(require 'doc-view)
 (setq doc-view-continuous t)
 
 ;; Zooming in doc view with control+mouse
@@ -65,6 +71,7 @@
 (global-set-key [C-wheel-up] 'text-scale-decrease)
 
 ;; Saving emacs history
+(require 'savehist)
 (savehist-mode 1)
 (setq savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
 (setq savehist-file "~/.emacs.d/savehist")
@@ -76,5 +83,12 @@
 ;; Shortcuts to allow using mouse in emacs
 (require 'mouse)
 (xterm-mouse-mode t)
-(defun track-mouse (e)) 
-(setq mouse-sel-mode t)
+
+(electric-pair-mode 1)
+(setq tab-width 2)
+
+(linum-mode 1)
+
+
+(provide '.emacs)
+;;; .emacs ends here
