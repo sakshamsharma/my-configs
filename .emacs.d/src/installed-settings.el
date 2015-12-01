@@ -1,20 +1,32 @@
-;;; my-loadpackages --- configuration for packages
+;;; installed-settings.el --- settings for packages I have installed
 ;;; Commentary:
-; loaded after packages have been installed
+;;; Refer to package-management.el for list of installed packages
 
 ;;; Code:
-(load "~/.emacs.d/my-packages.el")
 
 (require 'magit)
 (define-key global-map (kbd "C-c m") 'magit-status)
 
 (require 'powerline)
-(powerline-default-theme)
+;(powerline-default-theme)
 
 (require 'markdown-mode)
 
-;(require 'ido)
-;(ido-mode t)
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
+(spaceline-toggle-workspace-number)
+(spaceline-toggle-battery-on)
+(spaceline-toggle-flycheck-info-on)
+(display-battery-mode 1)
+(nyan-mode 1)
+(anzu-mode 1)
+;(spaceline-workspace-numbers-unicode 1)
+;(spaceline-window-numbers-unicode 1)
+(eyebrowse-mode 1)
+(window-numbering-mode 1)
+
+(require 'unicode-fonts)
+(unicode-fonts-setup)
 
 ;;============================================================
 (require 'helm)
@@ -52,13 +64,10 @@
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
       helm-ff-file-name-history-use-recentf t ; should show recent files at the top
       helm-scroll-amount                    8); scroll 8 lines other window using M-<next>/M-<prior>
-;;      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
-
-
 ;;============================================================
 
 
@@ -91,6 +100,11 @@
 
 ;; To jump to the location of the top-level identifier at point, run
 (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-jump-to-def-or-tag)
+
+;; For ghc plugin (emacs with ghc-mod)
+(autoload 'ghc-init "~/.cabal/bin/ghc" nil t)
+(autoload 'ghc-debug "~/.cabal/bin/ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 (require 'yasnippet)
 
@@ -134,5 +148,12 @@
 (setq js-indent-level 2)
 (add-hook 'js2-mode-hook 'flycheck-mode)
 
-(provide 'my-loadpackages.el)
-;;; my-loadpackages.el ends here
+;; Org mode shortcuts
+;; The following lines are always needed. Choose your own keys.
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+(provide 'installed-settings.el)
+;;; installed-settings.el ends here
