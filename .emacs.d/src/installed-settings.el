@@ -8,11 +8,18 @@
 (define-key global-map (kbd "C-c m") 'magit-status)
 
 (require 'powerline)
-;(powerline-default-theme)
+(require 'powerline-separators)
+(powerline-default-theme)
+;(setq powerline-default-separator wave)
 
 (require 'markdown-mode)
 
 (require 'spaceline-config)
+(require 'spaceline-segments)
+(require 'spaceline)
+;(spaceline-workspace-numbers-unicode 1)
+;(spaceline-window-numbers-unicode 1)
+
 (spaceline-spacemacs-theme)
 (spaceline-toggle-workspace-number)
 (spaceline-toggle-battery-on)
@@ -20,8 +27,8 @@
 (display-battery-mode 1)
 (nyan-mode 1)
 (anzu-mode 1)
-;(spaceline-workspace-numbers-unicode 1)
-;(spaceline-window-numbers-unicode 1)
+(spaceline-battery-p)
+(spaceline-nyan-cat-p)
 (eyebrowse-mode 1)
 (window-numbering-mode 1)
 
