@@ -54,7 +54,7 @@ fireSPConfig = defaultXPConfig
     autoComplete        = Nothing
   }
 
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
+myWorkspaces    = ["1: Browser","2: Emacs","3: Terminal","4: Music","5: Files","6: Video","7","8","9"]
 
 myManagementHooks :: [ManageHook]
 myManagementHooks = [ composeOne [ isFullscreen -?> doFullFloat  ], resource =? "synapse" --> doIgnore ]
