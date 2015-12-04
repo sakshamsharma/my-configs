@@ -19,5 +19,8 @@
 
 (electric-pair-mode 1)
 
+;; Fix font size
+(set-face-attribute 'default nil :height 120)
+
 (provide 'settings.el)
 ;;; settings.el ends here

@@ -27,8 +27,6 @@
 (display-battery-mode 1)
 (nyan-mode 1)
 (anzu-mode 1)
-(spaceline-battery-p)
-(spaceline-nyan-cat-p)
 (eyebrowse-mode 1)
 (window-numbering-mode 1)
 
@@ -81,10 +79,13 @@
 (require 'tabbar)
 (tabbar-mode 1)
 
+;; ======= Haskell ========
+
 (require 'haskell-mode)
 (require 'haskell-interactive-mode)
 (require 'haskell-process)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
 (custom-set-variables
   '(haskell-process-suggest-remove-import-lines t)
@@ -92,18 +93,30 @@
   '(haskell-process-log t)
 	'(haskell-tags-on-save))
 
+; Add F8 key combination for going to imports block
+(eval-after-load 'haskell-mode
+  '(define-key haskell-mode-map [f8] 'haskell-navigate-imports))
+
 (require 'speedbar)
 (speedbar-add-supported-extension ".hs")
 
-(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
-(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
-(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
-(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-(define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
-(define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
-(define-key haskell-mode-map (kbd "C-x C-s") 'haskell-mode-save-buffer)
+(custom-set-variables
+  '(haskell-process-suggest-remove-import-lines t)
+  '(haskell-process-auto-import-loaded-modules t)
+  '(haskell-process-log t))
+(eval-after-load 'haskell-mode '(progn
+  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+  (define-key haskell-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
+  (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
+  (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
+  (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
+  (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)
+  (define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)))
+(eval-after-load 'haskell-cabal '(progn
+  (define-key haskell-cabal-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
 
 ;; To jump to the location of the top-level identifier at point, run
 (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-jump-to-def-or-tag)
@@ -112,6 +125,9 @@
 (autoload 'ghc-init "~/.cabal/bin/ghc" nil t)
 (autoload 'ghc-debug "~/.cabal/bin/ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+(define-key haskell-mode-map (kbd "C-c t") 'ghc-show-type)
+
+;; ====== Haskell finished =====
 
 (require 'yasnippet)
 
@@ -131,10 +147,6 @@
 (add-hook 'term-mode-hook
           (lambda ()
             (define-key term-raw-map (kbd "C-y") 'term-paste)))
-
-(autoload 'ghc-init "ghc" nil t)
-(autoload 'ghc-debug "ghc" nil t)
-(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
 
 ;; dart mode
 (require 'flycheck)
