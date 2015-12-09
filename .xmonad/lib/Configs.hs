@@ -3,6 +3,7 @@ module Configs where
 import XMonad
 import XMonad.Layout.Spacing
 import XMonad.Layout.NoBorders(smartBorders)
+import qualified XMonad.Layout.Tabbed as Tab
 import System.IO
 import Data.Monoid
 import Data.Maybe
@@ -10,6 +11,7 @@ import System.Exit
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Actions.Submap
+import XMonad.Hooks.Place
 import XMonad.Hooks.ManageHelpers
 
 import XMonad.Prompt
@@ -56,10 +58,22 @@ fireSPConfig = defaultXPConfig
 
 myWorkspaces    = ["1: Browser","2: Emacs","3: Terminal","4: Music","5: Files","6: Video","7","8","9"]
 
-myManagementHooks :: [ManageHook]
-myManagementHooks = [ composeOne [ isFullscreen -?> doFullFloat  ], resource =? "synapse" --> doIgnore ]
+myFullscreenHooks = [ composeOne [ isFullscreen -?> doFullFloat  ], resource =? "synapse" --> doIgnore ]
 
-myLayout = tiled ||| stiled ||| Mirror tiled ||| Full
+myPlacement = withGaps (16,0,16,0) (smart (0.5,0.5))
+
+myManagementHooks = composeAll . concat $
+    [ [ className   =? c --> doFloat           | c <- myFloats]
+    , [ title       =? t --> doFloat           | t <- myOtherFloats]
+    , [ className   =? c --> doF (W.shift "1") | c <- webApps]
+    , [ className   =? c --> doF (W.shift "2") | c <- emacs]
+    ]
+  where myFloats      = ["MPlayer", "Gimp", "chrome-app-list"]
+        myOtherFloats = ["alsamixer", "chrome-app-list", "cappl", "htop"]
+        webApps       = ["google-chrome-unstable"] -- open on desktop 2
+        emacs         = ["emacs"]                  -- open on desktop 3
+
+myLayout = tiled ||| stiled ||| Mirror tiled ||| Tab.simpleTabbed
  where
   -- default tiling algorithm partitions the screen into two panes
   tiled = Tall nmaster1 delta ratio

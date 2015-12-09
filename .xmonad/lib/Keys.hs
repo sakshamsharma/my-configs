@@ -9,6 +9,7 @@ import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.WindowNavigation
 import XMonad.Prompt
 import XMonad.Prompt.Shell
+import XMonad.Hooks.Place
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run
@@ -27,14 +28,12 @@ myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
   [
--- | Scratchpads
-    ((modm,               xK_F4    ), namedScratchpadAction scratchpads "urxvt --hold -e htop")
-  , ((modm,               xK_F5    ), namedScratchpadAction scratchpads "urxvt --hold -e alsamixer")
-  , ((modm,               xK_F6    ), namedScratchpadAction scratchpads "gvim")
-
 -- | App launchers
-  , ((modm,               xK_d     ), spawn "dmenu_run")                                      -- launch dmenu
-  , ((modm .|. shiftMask, xK_d     ), spawn "gmrun")                                          -- launch gmrun (better dmenu)
+    ((modm,               xK_d     ), spawn "dmenu_run")                                      -- launch dmenu
+  , ((modm,               xK_F4    ), spawn "urxvt -e alsamixer")
+  , ((modm,               xK_F5    ), spawn "urxvt --hold -e htop")
+  , ((modm .|. shiftMask, xK_d     ), spawn "cappl")                                          -- launch gmrun (better dmenu)
+  , ((modm, xK_w), placeFocused simpleSmart)
   , ((modm,               xK_Return), spawn $ XMonad.terminal conf)                           -- launch terminal
   , ((modm,               xK_F1    ), spawn "google-chrome-unstable")                         -- launch chrome
   , ((mod1Mask,           xK_Return), spawn "emc")
@@ -75,6 +74,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
   -- Move focus to the previous window
   , ((modm,               xK_k     ), windows W.focusUp  )
+  , ((modm .|. shiftMask, xK_Tab   ), windows W.focusUp  )
   , ((modm,               xK_Left  ), windows W.focusUp  )
 
 -- |Master window management
@@ -86,6 +86,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
   -- Swap the focused window with the previous window
   , ((modm .|. shiftMask, xK_k     ), windows W.swapUp    )
+
+  , ((modm,               xK_z     ), toggleWS            )
 
   -- Shrink the master area
   , ((modm,               xK_h     ), sendMessage Shrink)
