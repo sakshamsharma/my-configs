@@ -16,6 +16,7 @@ alias wanping='ping -c 3 www.google.com'
 alias wifi='sudo wifi-menu'
 alias fgrep='grep -r -i'
 alias pjson='node -e "console.log(JSON.stringify(JSON.parse(require('fs').readFileSync(process.argv[1])), null, 4));" ' # Prettify input JSON file
+alias prettyjson='python -m json.tool'
 
 # Commonly used dirs
 alias core='cd /home/saksham/ixchel/core/src/main/scala/org.gmantra.ixchel/models'

@@ -3,7 +3,10 @@
 #[[ -z "$TMUX" ]] && exec tmux
 
 # To display items in the folder you currently are browing with Ctrl+K or Return on empty input
-bindkey -s '\C-K' '^qls\n'
+#bindkey -s '\C-K' '^qls\n'
+
+# Run `ls` on a return press if the input is empty for now
+
 accept-line() {
   if [[ -z $BUFFER ]]; then
     zle -I
@@ -49,7 +52,7 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[End]}"      ]]  && bindkey  "${key[End]}"      end-of-line
 [[ -n "${key[Insert]}"   ]]  && bindkey  "${key[Insert]}"   overwrite-mode
 [[ -n "${key[Delete]}"   ]]  && bindkey  "${key[Delete]}"   delete-char
-[[ -n "${key[Up]}"       ]]  && bindkey  "${key[Up]}"       up-line-or-history
+[[ -n "${key[Up]}"       ]]  && bindkey  "${key[Up]}"       up-line-or-history 
 [[ -n "${key[Down]}"     ]]  && bindkey  "${key[Down]}"     down-line-or-history
 [[ -n "${key[Left]}"     ]]  && bindkey  "${key[Left]}"     backward-char
 [[ -n "${key[Right]}"    ]]  && bindkey  "${key[Right]}"    forward-char
@@ -76,3 +79,24 @@ fi
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 #stty -ixon
+
+# Don't break my EMACS instinct.
+# Allow C-P and C-N to do partial history matching.
+# Never need to get to those far-off page up/down keys :)
+bindkey '\C-P' history-beginning-search-backward
+bindkey '\C-N' history-beginning-search-forward
+
+# ZAW
+# Credits where they're due :)
+# https://github.com/zsh-users/zaw
+# http://blog.patshead.com/2013/04/more-powerful-zsh-history-search-using-zaw.html
+source $MYZSH/zaw/zaw.zsh
+bindkey '^R' zaw-history
+bindkey -M filterselect '^R' down-line-or-history
+bindkey -M filterselect '^S' up-line-or-history
+bindkey -M filterselect '^E' accept-search
+
+zstyle ':filter-select:highlight' matched fg=green
+zstyle ':filter-select' max-lines 3
+zstyle ':filter-select' case-insensitive yes # enable case-insensitive
+zstyle ':filter-select' extended-search yes # see below
