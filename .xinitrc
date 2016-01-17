@@ -32,4 +32,4 @@ eval `dbus-launch --auto-syntax`
 # Make caps a new control
 setxkbmap -option ctrl:nocaps
 xmodmap ~/.Xmodmap
-exec xmonad
+exec ssh-agent xmonad
