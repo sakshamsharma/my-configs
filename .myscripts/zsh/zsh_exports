@@ -12,24 +12,24 @@ export PATH=$HOME/dartium:$PATH
 export PATH=/opt/dart-sdk/bin/:$PATH
 
 # Adding path for arcanist to allow arc command
-export PATH=/home/saksham/arcanist/bin:$PATH    
+export PATH=$HOME/arcanist/bin:$PATH    
 
-export PATH=/home/saksham/.pub-cache/bin:$PATH
+export PATH=$HOME/.pub-cache/bin:$PATH
 
-export PATH=/home/saksham/.gem/ruby/2.2.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 
-export PATH=/home/saksham/.cabal/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
 
-export PATH=/home/saksham/kubernetes/cluster/ubuntu/binaries:$PATH
+export PATH=$HOME/kubernetes/cluster/ubuntu/binaries:$PATH
 
 # Node version manager
-export NVM_DIR="/home/saksham/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export EDITOR=vim
 
-export MYZSH=/home/saksham/.myscripts/zsh
+export MYZSH=$HOME/.myscripts/zsh
 
-export LFS=/home/saksham/mnt/LFS/
+export LFS=$HOME/mnt/LFS/
 
-export GOPATH=/home/saksham/gocode
+export GOPATH=$HOME/gocode

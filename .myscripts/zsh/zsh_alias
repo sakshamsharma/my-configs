@@ -9,6 +9,7 @@ alias repo='sudo add-apt-repository'
 alias pac='sudo pacman -S'
 alias rem='sudo pacman -R'
 alias emerge='sudo emerge --ask'
+alias webstorm='_JAVA_AWT_WM_NONREPARENTING=1 webstorm'
 
 alias proc='ps -e | grep'
 alias lanping='ping -c 3 webmail.iitk.ac.in'
@@ -19,15 +20,15 @@ alias pjson='node -e "console.log(JSON.stringify(JSON.parse(require('fs').readFi
 alias prettyjson='python -m json.tool'
 
 # Commonly used dirs
-alias core='cd /home/saksham/ixchel/core/src/main/scala/org.gmantra.ixchel/models'
-alias htt='cd /home/saksham/ixchel/http/src/main/scala/org.gmantra.ixchel/api'
-alias mys='cd /home/saksham/.myscripts/'
-alias ixc='cd /home/saksham/ixchel/'
-alias si='cd /home/saksham/ixchel-si/'
-alias com='cd /home/saksham/maya/lib/component/'
-alias web='cd /home/saksham/maya/web/'
-alias lib='cd /home/saksham/maya/lib/'
-alias tem='cd /home/saksham/maya/lib/component/template/'
+alias core='cd $HOME/ixchel/core/src/main/scala/org.gmantra.ixchel/models'
+alias htt='cd $HOME/ixchel/http/src/main/scala/org.gmantra.ixchel/api'
+alias mys='cd $HOME/.myscripts/'
+alias ixc='cd $HOME/ixchel/'
+alias si='cd $HOME/ixchel-si/'
+alias com='cd $HOME/maya/lib/component/'
+alias web='cd $HOME/maya/web/'
+alias lib='cd $HOME/maya/lib/'
+alias tem='cd $HOME/maya/lib/component/template/'
 
 # Mounting aliases
 alias DataDr='sudo mount /dev/sda6 /mnt'
@@ -43,6 +44,7 @@ alias damn='$(thefuck $(fc -ln -1))'
 
 # Git aliases
 alias g='git'
+alias gco='git checkout'
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs='git status -sb'
 alias gd='git diff'

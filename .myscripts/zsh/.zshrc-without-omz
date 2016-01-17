@@ -8,7 +8,7 @@ bindkey -v
 autoload -U colors && colors
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/saksham/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit promptinit
 compinit
