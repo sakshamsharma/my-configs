@@ -29,7 +29,10 @@ eval `dbus-launch --auto-syntax`
 # configure synclient touchpad
 /home/saksham/.myscripts/touchpad.sh
 
+feh --bg-fill ~/Wallpapers/hack.jpg &
+
 # Make caps a new control
 setxkbmap -option ctrl:nocaps
 xmodmap ~/.Xmodmap
+urxvtd --quiet --opendisplay --fork
 exec ssh-agent xmonad
