@@ -73,6 +73,6 @@ main = do
       enet2 = netMonitorNewWith 10 "eno1" 1 myNetFormat
       tray = systrayNew
   defaultTaffybar defaultTaffybarConfig { startWidgets = [ pager, note ]
-                                        , endWidgets = [ tray, wea, clock, mem, cpu, enet2, enet, wnet, mpris ]
-                                        , monitorNumber = 1
+                                        , endWidgets = [ tray, wea, clock, mem, cpu, batt, enet2, enet, wnet, mpris ]
+                                        {-, monitorNumber = 1-}
                                         }

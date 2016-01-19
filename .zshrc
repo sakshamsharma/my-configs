@@ -1,5 +1,5 @@
 source ~/.myscripts/zsh/zsh_sources
-PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:${ROOTPATH}:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/bin/:${ROOTPATH}:$PATH"
 
 # Load zsh-autosuggestions.
 #source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
