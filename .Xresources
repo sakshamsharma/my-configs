@@ -318,7 +318,7 @@ urxvt*dynamicColors: on
 ! ==================
 ! Solarized colors!!
 ! ==================
-#define S_base03        #002b36
+#define S_base03        #001b26
 #define S_base02        #073642
 #define S_base01        #586e75
 #define S_base00        #657b83
@@ -328,7 +328,7 @@ urxvt*dynamicColors: on
 #define S_base3         #fdf6e3
 
 *background:            S_base03
-*foreground:            S_base0
+*foreground:            #ffffff
 *fadeColor:             S_base03
 *cursorColor:           S_base1
 *pointerColorBackground:S_base01
@@ -343,27 +343,21 @@ urxvt*dynamicColors: on
 #define S_cyan          #2aa198
 #define S_green         #859900
 
-!! black dark/light
-*color0:                S_base02
-*color8:                S_base03
-!! red dark/light
-*color1:                S_red
-*color9:                S_orange
-!! green dark/light
-*color2:                S_green
-*color10:               S_base01
-!! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
-!! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
-!! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
-!! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
-!! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+! This changes the default colour definitions for the terminal.
+! The 1st one in each section is normal Black (example), second is bright
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
