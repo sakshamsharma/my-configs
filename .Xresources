@@ -50,7 +50,7 @@
 ! URxvt*skipScroll: boolean
 
 ! Fade the text by the given percentage when focus is lost; option
-! URxvt*fading: number
+! URxvt*fading: 20
 
 ! Fade to this colour, when fading is used (see fading:). The default
 ! URxvt*fadeColor: colour
@@ -268,44 +268,13 @@
 
 ! Turn on/off ISO 14755 5.2 mode (default enabled).
 ! URxvt*iso14755_52: boolean
-!
-! -----------------------------
-! MY SOLARIZED THEME FOR URXVT
-! -----------------------------
-! URxvt colours
-!URxvt*background: #002932
-!URxvt*foreground: White
-
-!! black
-!URxvt*color0  : #2E3436
-!URxvt*color8  : #555753
-!! red
-!URxvt*color1  : #CC0000
-!URxvt*color9  : #EF2929
-!! green
-!URxvt*color2  : #4E9A06
-!URxvt*color10 : #8AE234
-!! yellow
-!URxvt*color3  : #C4A000
-!URxvt*color11 : #FCE94F
-!! blue
-!URxvt*color4  : #3465A4
-!URxvt*color12 : #729FCF
-!! magenta
-!URxvt*color5  : #75507B
-!URxvt*color13 : #AD7FA8
-!! cyan
-!URxvt*color6  : #06989A
-!URxvt*color14 : #34E2E2
-!! white
-!URxvt*color7  : #D3D7CF
-!URxvt*color15 : #EEEEEC
-
 
 
 URxvt*cursorBlink: True
+URxvt*fading: 20
 URxvt*saveLines: 12000
 URxvt.font: xft:monofur for Powerline:size=14
+URxvt.tabbed.autohide: true
 
 ! Scrollbar options
 URxvt*scrollstyle: plain
@@ -313,36 +282,11 @@ URxvt*scrollBar_right: True
 URxvt*scrollBar_floating: True
 URxvt*jumpScroll: True
 
-! URxvt colours
-URxvt*background: #002932
-URxvt*foreground: White
-
-
-! This changes the default colour definitions for the terminal.
-! The 1st one in each section is normal Black (example), second is bright
-*color0:  #2E3436
-*color1:  #a40000
-*color2:  #4E9A06
-*color3:  #C4A000
-*color4:  #3465A4
-*color5:  #75507B
-*color6:  #ce5c00
-*color7:  #babdb9
-*color8:  #555753
-*color9:  #EF2929
-*color10: #8AE234
-*color11: #FCE94F
-*color12: #729FCF
-*color13: #AD7FA8
-*color14: #fcaf3e
-*color15: #EEEEEC
-
-
 !urxvt*secondaryScreen: false
 
 ! To implement clickable URLs
 URxvt.perl-ext-common:      default,matcher,vtwheel,clipboard,url-select,keyboard-select
-URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.url-launcher:         /usr/bin/google-chrome-stable
 URxvt.url-select.launcher:  /usr/bin/google-chrome-stable
 URxvt.url-select.underline: true
 URxvt.keysym.M-u:           perl:url-select:select_next
@@ -359,19 +303,67 @@ URxvt.iso14755_52: false
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 
-URxvt.tabbed.autohide: true
-
 URxvt.keysym.Mod4-c: perl:clipboard:copy
 URxvt.keysym.Mod4-v: perl:clipboard:paste
 
 xscreensaver.newLoginCommand: dm-tool switch-to-greeter
 
-!-*-{ Xft settings
 Xft*dpi:       96
 Xft*antialias: True
 Xft*hinting:   Full
-!-*-}
 
-! Background colors
-urxvt*foreground: white
-urxvt*background: black
+xterm*dynamicColors: true
+urxvt*dynamicColors: on
+
+! ==================
+! Solarized colors!!
+! ==================
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
