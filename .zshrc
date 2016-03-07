@@ -23,4 +23,9 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/bin/:${R
 
 EDITOR=vim
 
+source /home/saksham/.zpyi/zpyi.zsh
 source /home/saksham/.zsh_cookies
+
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
