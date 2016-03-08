@@ -1,5 +1,6 @@
 # Alias for my zsh
 alias gv='gvim'
+alias vim='nvim'
 alias em='emacsclient'
 alias ks='ls'
 alias nemo='nemo --no-desktop'
