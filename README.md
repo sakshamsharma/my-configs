@@ -1,4 +1,7 @@
 # my-rc-files
+# DEPRECATED
+Please refer to [my new and awesome config management system](https://github.com/sakshamsharma/dotfiles-genie) for the latest dotfiles.
+
 Contains my rc files
 
 Run **./.myscripts/add_rc.sh** to stage new changes.
